@@ -29,7 +29,7 @@
                 <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
                 <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
                 <a href="login.html" class="btn btn-secondary">Login</a>
-                <a href="courses.html" class="btn btn-primary">Book Training</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <i data-lucide="menu"></i>
                 </button>
@@ -53,7 +53,7 @@
                 </ul>
                 <div class="mobile-ctas">
                     <a href="login.html" class="btn btn-secondary">Login</a>
-                    <a href="courses.html" class="btn btn-primary">Book Training</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -61,16 +61,16 @@
 
     <main>
         <!-- Section 1: Immersive Hero -->
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1516549119106-f6424356075c?q=80&w=1600&auto=format&fit=crop'); min-height: 85vh; display: flex; align-items: center;">
-            <div class="hero-overlay" style="background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%);"></div>
+        <section class="hero" style="background-image: var(--hero-bg); min-height: 85vh; display: flex; align-items: center; background-position: center;">
+            <div class="hero-overlay" style="background: var(--hero-overlay);"></div>
             <div class="container">
-                <div class="hero-content reveal-blur" style="max-width: 800px;">
+                <div class="hero-content reveal-blur" style="max-width: 900px; margin: 0 auto; text-align: center; color: var(--hero-text);">
                     <span style="color: var(--primary); font-weight: 800; font-size: 1.125rem; letter-spacing: 2px; text-transform: uppercase;">AHA & Red Cross Certified</span>
-                    <h1 style="font-size: 5rem; line-height: 1; margin: 2rem 0; font-weight: 900; color: white;">Life-Saving <span style="color: var(--primary);">Expertise</span>, Within Reach.</h1>
-                    <p style="font-size: 1.5rem; color: rgba(255,255,255,0.9); margin-bottom: 3.5rem; font-weight: 600;">Choose the gold standard in emergency medical training. From basic first aid to advanced cardiac support, we empower you to act with precision.</p>
-                    <div class="flex gap-4">
+                    <h1 style="font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; margin: 2rem auto; font-weight: 900;">Life-Saving <span style="color: var(--primary);">Expertise</span>, Within Reach.</h1>
+                    <p style="font-size: clamp(1.125rem, 3vw, 1.5rem); opacity: 0.95; margin: 0 auto 3.5rem; font-weight: 600; max-width: 750px;">Choose the gold standard in emergency medical training. From basic first aid to advanced cardiac support, we empower you to act with precision.</p>
+                    <div class="flex gap-4" style="justify-content: center;">
                         <a href="#categories" class="btn btn-primary" style="padding: 1.25rem 3rem;">Browse Catalog</a>
-                        <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white;">Bulk Inquiries</a>
+                        <a href="contact.html" class="btn btn-secondary" style="color: inherit;">Bulk Inquiries</a>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,6 @@
             </div>
         </section>
     </main>
-    </main>
 
 
     <footer class="site-footer">
@@ -262,6 +261,10 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>

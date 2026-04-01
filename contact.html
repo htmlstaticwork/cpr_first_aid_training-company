@@ -21,7 +21,7 @@
                 <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
                 <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
                 <a href="login.html" class="btn btn-secondary">Login</a>
-                <a href="courses.html" class="btn btn-primary">Book Training</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <i data-lucide="menu"></i>
                 </button>
@@ -45,7 +45,7 @@
                 </ul>
                 <div class="mobile-ctas">
                     <a href="login.html" class="btn btn-secondary">Login</a>
-                    <a href="courses.html" class="btn btn-primary">Book Training</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -53,42 +53,51 @@
 
     <main>
         <!-- Section 1: Hero with Background -->
-        <section class="hero" id="hero" style="background-image: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1600&auto=format&fit=crop');">
-            <div class="hero-overlay"></div>
+        <section class="hero hero-compact" id="hero" style="background-image: var(--hero-bg); background-position: center;">
+            <div class="hero-overlay" style="background: var(--hero-overlay);"></div>
             <div class="container">
-                <div class="hero-content reveal-zoom-out">
+                <div class="hero-content reveal-zoom-out" style="color: var(--hero-text);">
                     <span style="color: var(--primary); font-weight: 800; font-size: 1.125rem;">CONNECT WITH US</span>
-                    <h1 style="font-size: 4rem; margin: 1.5rem 0; font-weight: 900;">Ready to <span style="color: var(--primary);">Respond</span>?</h1>
-                    <p style="max-width: 600px; font-size: 1.25rem;">Whether you're an individual or a global enterprise, we're here to facilitate your life-saving journey.</p>
+                    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 1.5rem 0; font-weight: 900;">Ready to <span style="color: var(--primary);">Respond</span>?</h1>
+                    <p style="max-width: 600px; font-size: 1.25rem; margin: 0 auto;">Whether you're an individual or a global enterprise, we're here to facilitate your life-saving journey.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: Quick Connect (Summary Cards) -->
+        <section class="quick-connect" style="padding: 100px 0; background: var(--bg-page); position: relative; z-index: 5; margin-top: -60px;">
+            <div class="container reveal">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                    
+                    <!-- Contact Card -->
+                    <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #FEF2F2; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); margin: 0 auto 2.5rem;"><i data-lucide="phone-call" size="36"></i></div>
+                        <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.5rem; font-weight: 800;">Contact Us</h3>
+                        <p style="color: var(--primary); font-weight: 900; font-size: 1.5rem; margin-bottom: 0.5rem;">(555) 012-3456</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; letter-spacing: 0.5px;">123 Lifesaver Way, TX 75001</p>
+                    </div>
+
+                    <!-- Mail Card -->
+                    <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #EEF2FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); margin: 0 auto 2.5rem;"><i data-lucide="mail-plus" size="36"></i></div>
+                        <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.5rem; font-weight: 800;">Mail Us</h3>
+                        <p style="color: var(--accent); font-weight: 900; font-size: 1.5rem; margin-bottom: 0.5rem;">info@lifeforce.com</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; letter-spacing: 0.5px;">Support 24/7 Mon-Fri</p>
+                    </div>
+
+                    <!-- Follow Card -->
+                    <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #F0FDF4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10B981; margin: 0 auto 2.5rem;"><i data-lucide="share-2" size="36"></i></div>
+                        <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 2rem; font-weight: 800;">Follow Us</h3>
+                        <div class="flex justify-center gap-10">
+                            <a href="#" class="social-icon-link" style="color: var(--text-secondary); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;"><i data-lucide="facebook" size="32"></i></a>
+                            <a href="#" class="social-icon-link" style="color: var(--text-secondary); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;"><i data-lucide="instagram" size="32"></i></a>
+                            <a href="#" class="social-icon-link" style="color: var(--text-secondary); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;"><i data-lucide="linkedin" size="32"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Ticket-Style Support Blocks -->
-        <section class="support-tickets" style="padding: 120px 0;">
-            <div class="container reveal">
-                <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                    <div style="border: 1px solid var(--border-light); padding: 3rem; border-radius: 24px; border-top: 6px solid var(--primary);">
-                        <i data-lucide="help-circle" style="color: var(--primary);"></i>
-                        <h3 style="margin: 1.5rem 0 1rem;">General Support</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Common questions about course materials or certification dates.</p>
-                        <a href="mailto:support@lifeforce.com" style="color: var(--primary); font-weight: 700; text-decoration: none;">Launch Ticket →</a>
-                    </div>
-                    <div style="border: 1px solid var(--border-light); padding: 3rem; border-radius: 24px; border-top: 6px solid var(--accent);">
-                        <i data-lucide="building" style="color: var(--accent);"></i>
-                        <h3 style="margin: 1.5rem 0 1rem;">Corporate Sales</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Inquire about on-site training for your workforce and group rates.</p>
-                        <a href="mailto:sales@lifeforce.com" style="color: var(--accent); font-weight: 700; text-decoration: none;">Request Quote →</a>
-                    </div>
-                    <div style="border: 1px solid var(--border-light); padding: 3rem; border-radius: 24px; border-top: 6px solid #059669;">
-                        <i data-lucide="credit-card" style="color: #059669;"></i>
-                        <h3 style="margin: 1.5rem 0 1rem;">Billing Department</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Questions regarding invoices, refunds, or volume licensing portal.</p>
-                        <a href="mailto:billing@lifeforce.com" style="color: #059669; font-weight: 700; text-decoration: none;">Contact Billing →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 3: Detailed Facility Cards -->
         <section class="facility-details" style="background: var(--bg-page); padding: 120px 0;">
@@ -218,6 +227,10 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>

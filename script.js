@@ -142,6 +142,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Accordion Toggle Logic
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    if (accordionHeaders.length > 0) {
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                
+                // Optional: Close other items (Single Open Mode)
+                // document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                //     if (otherItem !== item) otherItem.classList.remove('active');
+                // });
+
+                item.classList.toggle('active');
+            });
+        });
+    }
+
+    // Back to Top Logic
+    const backToTopBtn = document.querySelector('.back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
     // Re-initialize Lucide (Insurance)
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();

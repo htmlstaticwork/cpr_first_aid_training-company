@@ -21,7 +21,7 @@
                 <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
                 <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
                 <a href="login.html" class="btn btn-secondary">Login</a>
-                <a href="courses.html" class="btn btn-primary">Book Training</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <i data-lucide="menu"></i>
                 </button>
@@ -45,7 +45,7 @@
                 </ul>
                 <div class="mobile-ctas">
                     <a href="login.html" class="btn btn-secondary">Login</a>
-                    <a href="courses.html" class="btn btn-primary">Book Training</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -53,13 +53,13 @@
 
     <main>
         <!-- Section 1: Hero with Background -->
-        <section class="hero" id="hero" style="background-image: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1600&auto=format&fit=crop');">
-            <div class="hero-overlay"></div>
+        <section class="hero hero-compact" id="hero" style="background-image: var(--hero-bg); background-position: center;">
+            <div class="hero-overlay" style="background: var(--hero-overlay);"></div>
             <div class="container">
-                <div class="hero-content reveal-blur">
+                <div class="hero-content reveal-blur" style="color: var(--hero-text);">
                     <span style="color: var(--primary); font-weight: 800; font-size: 1.125rem;">TRANSPARENT VALUE</span>
-                    <h1 style="font-size: 4rem; margin: 1.5rem 0; font-weight: 900;">Affordable Safety <span style="color: var(--primary);">for All</span>.</h1>
-                    <p style="max-width: 700px; font-size: 1.25rem;">Professional certification paths tailored to your budget and career goals.</p>
+                    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 1.5rem 0; font-weight: 900;">Affordable Safety <span style="color: var(--primary);">for All</span>.</h1>
+                    <p style="max-width: 700px; font-size: 1.25rem; margin: 0 auto;">Professional certification paths tailored to your budget and career goals.</p>
                 </div>
             </div>
         </section>
@@ -67,36 +67,48 @@
         <!-- Section 2: Vertical Stacked Plans -->
         <section class="stacked-plans" style="padding: 120px 0; background: var(--bg-page);">
             <div class="container reveal">
-                <h2 style="margin-bottom: 4rem; text-align: center;">Our Certification Tiers</h2>
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <!-- Tier 1 -->
-                    <div style="background: var(--bg-card); padding: 2.5rem; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-light); transform: scale(1); transition: transform 0.3s;">
-                        <div style="display: flex; gap: 2rem; align-items: center;">
-                            <div style="width: 60px; height: 60px; background: var(--bg-page); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="shield"></i></div>
-                            <div>
-                                <h3 style="margin-bottom: 0.25rem;">Basic Responder</h3>
-                                <p style="color: var(--text-secondary);">Ideal for individuals and teachers.</p>
-                            </div>
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px;">CERTIFICATION TIERS</span>
+                    <h2 style="font-size: 3.5rem; margin: 1rem 0;">Ready to Save Lives?</h2>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Select the track that best fits your professional or community needs.</p>
+                </div>
+                
+                <div class="pricing-stack">
+                    <!-- Basic Responder -->
+                    <div class="pricing-row">
+                        <div style="width: 80px; height: 80px; background: var(--bg-page); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary); border: 2px solid var(--border);"><i data-lucide="users" size="36"></i></div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Basic Responder</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">Standard CPR/AED certification for individuals, community members, and school staff.</p>
+                        <div style="margin-bottom: 3rem;">
+                            <span style="font-size: 0.875rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">From Just</span>
+                            <div style="font-size: 3.5rem; font-weight: 900; color: var(--text-primary);">$89</div>
                         </div>
-                        <div class="flex gap-4 items-center">
-                            <span style="font-size: 2rem; font-weight: 800;">$89</span>
-                            <a href="signup.html" class="btn btn-secondary">Select</a>
-                        </div>
+                        <a href="signup.html" class="btn btn-secondary" style="padding: 1.25rem 2.5rem; width: 100%;">Enroll Now</a>
                     </div>
-                    <!-- Tier 2 (Highlighted) -->
-                    <div style="background: var(--bg-card); padding: 3.5rem 2.5rem; border-radius: 24px; display: flex; justify-content: space-between; align-items: center; border: 2px solid var(--primary); box-shadow: var(--shadow-lg); position: relative;">
-                         <div style="position: absolute; left: 40px; top: -15px; background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 800;">BEST FOR CAREERS</div>
-                        <div style="display: flex; gap: 2rem; align-items: center;">
-                            <div style="width: 60px; height: 60px; background: #FEF2F2; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);"><i data-lucide="award"></i></div>
-                            <div>
-                                <h3 style="margin-bottom: 0.25rem;">Universal Professional</h3>
-                                <p style="color: var(--text-secondary);">The industry gold standard certification.</p>
-                            </div>
+
+                    <!-- Universal Professional -->
+                    <div class="pricing-row popular">
+                        <div style="position: absolute; left: 50%; top: -18px; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.5rem 1.75rem; border-radius: 50px; font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; white-space: nowrap;">Most Popular track</div>
+                        <div style="width: 80px; height: 80px; background: #FEF2F2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary);"><i data-lucide="shield-check" size="36"></i></div>
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Universal Professional</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">Healthcare BLS & First Responder training. The gold standard for careers.</p>
+                        <div style="margin-bottom: 3rem;">
+                            <span style="font-size: 0.875rem; font-weight: 800; color: var(--primary); text-transform: uppercase;">Total Value</span>
+                            <div style="font-size: 4.5rem; font-weight: 900; color: var(--primary);">$149</div>
                         </div>
-                        <div class="flex gap-4 items-center">
-                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">$149</span>
-                            <a href="signup.html" class="btn btn-primary">Select Plan</a>
+                        <a href="signup.html" class="btn btn-primary" style="padding: 1.5rem 2.5rem; width: 100%; font-size: 1.125rem;">Select Plan</a>
+                    </div>
+
+                    <!-- Instructor Masterclass -->
+                    <div class="pricing-row">
+                        <div style="width: 80px; height: 80px; background: var(--bg-page); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary); border: 2px solid var(--border);"><i data-lucide="graduation-cap" size="36"></i></div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Instructor Masterclass</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">Advanced train-the-trainer training for corporate safety officers and medical leads.</p>
+                        <div style="margin-bottom: 3rem;">
+                            <span style="font-size: 0.875rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Full Access</span>
+                            <div style="font-size: 3.5rem; font-weight: 900; color: var(--text-primary);">$299</div>
                         </div>
+                        <a href="signup.html" class="btn btn-secondary" style="padding: 1.25rem 2.5rem; width: 100%;">Inquire Now</a>
                     </div>
                 </div>
             </div>
@@ -137,20 +149,38 @@
             <div class="container reveal">
                 <div style="max-width: 800px; margin: 0 auto;">
                     <h2 style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem;">Volume & Special Rates</h2>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-                            <div class="flex justify-between items-center" style="cursor: pointer;">
-                                <h4 style="margin:0;">Group Bookings (5+ Students)</h4>
-                                <i data-lucide="plus"></i>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4 style="margin: 0; font-size: 1.25rem;">Group Bookings (5+ Students)</h4>
+                                <i data-lucide="chevron-down"></i>
                             </div>
-                            <div style="margin-top: 1.5rem; opacity: 0.7;"><p>Save 15% on individual rates when booking for local community centers or small business teams.</p></div>
+                            <div class="accordion-content">
+                                <p style="line-height: 1.7; opacity: 0.85;">Save a minimum of 15% on individual rates when booking for local community centers, small business teams, or educational staff. Group on-site training is also available upon request.</p>
+                            </div>
                         </div>
-                        <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-                            <div class="flex justify-between items-center" style="cursor: pointer;">
-                                <h4 style="margin:0;">Healthcare Professionals</h4>
-                                <i data-lucide="plus"></i>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4 style="margin: 0; font-size: 1.25rem;">Healthcare Professionals & Students</h4>
+                                <i data-lucide="chevron-down"></i>
                             </div>
-                            <div style="margin-top: 1.5rem; opacity: 0.7;"><p>Special discounts for nurses, medical students, and active first responders.</p></div>
+                            <div class="accordion-content">
+                                <p style="line-height: 1.7; opacity: 0.85;">We offer specialized discounts for nurses, medical students, active first responders, and frontline workers. Verification is required at the time of certification but results in immediate savings on all BLS tracks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h4 style="margin: 0; font-size: 1.25rem;">Corporate Safety & Volume Licensing</h4>
+                                <i data-lucide="chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p style="line-height: 1.7; opacity: 0.85;">For national enterprises and safety directors, we provide volume licensing portals and dedicated training portals. This allows for massive fleet-wide certification with unified billing and tracking.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -228,6 +258,10 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop">
+        <i data-lucide="chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>
