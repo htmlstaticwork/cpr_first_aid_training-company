@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog | LifeForce Training</title>
+    <meta name="description" content="Explore our wide range of certified CPR, AED, and First Aid courses. Find a class that fits your schedule and skill level.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container flex items-center justify-between" style="height: 100%;">
+            <div class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></div>
+             <nav>
+                <ul>
+                    <li><a href="index.html" >Home 1</a></li>
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="header-ctas">
+                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
+                <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="courses.html" class="btn btn-primary">Book Training</a>
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="menu-overlay" id="menu-overlay"></div>
+            <div class="nav-menu" id="nav-menu">
+                <div class="logo" style="margin-bottom: 2.5rem;">
+                    <i data-lucide="heart-pulse"></i>
+                    <span>LifeForce</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="mobile-ctas">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="courses.html" class="btn btn-primary">Book Training</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Immersive Hero -->
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1516549119106-f6424356075c?q=80&w=1600&auto=format&fit=crop'); min-height: 85vh; display: flex; align-items: center;">
+            <div class="hero-overlay" style="background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%);"></div>
+            <div class="container">
+                <div class="hero-content reveal-blur" style="max-width: 800px;">
+                    <span style="color: var(--primary); font-weight: 800; font-size: 1.125rem; letter-spacing: 2px; text-transform: uppercase;">AHA & Red Cross Certified</span>
+                    <h1 style="font-size: 5rem; line-height: 1; margin: 2rem 0; font-weight: 900; color: white;">Life-Saving <span style="color: var(--primary);">Expertise</span>, Within Reach.</h1>
+                    <p style="font-size: 1.5rem; color: rgba(255,255,255,0.9); margin-bottom: 3.5rem; font-weight: 600;">Choose the gold standard in emergency medical training. From basic first aid to advanced cardiac support, we empower you to act with precision.</p>
+                    <div class="flex gap-4">
+                        <a href="#categories" class="btn btn-primary" style="padding: 1.25rem 3rem;">Browse Catalog</a>
+                        <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white;">Bulk Inquiries</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Interactive Category Hub -->
+        <section id="categories" style="padding: 120px 0; background: var(--bg-page);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 6rem;" class="reveal-up">
+                    <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Pathways to Certification</h2>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.125rem;">Select your professional track to view available schedules and specialized modules.</p>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+                    <!-- Category 1 -->
+                    <div class="reveal-pop" style="background: var(--bg-card); border-radius: 40px; padding: 3rem; border: 1px solid var(--border); transition: all 0.4s ease; cursor: pointer; transform: translateY(0);" onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
+                        <div style="width: 80px; height: 80px; background: #FEF2F2; color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+                            <i data-lucide="shield-plus" size="40"></i>
+                        </div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">Healthcare (BLS)</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Professional-grade life support training for nurses, doctors, and first responders.</p>
+                        <a href="pricing.html" style="color: var(--primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">View Classes <i data-lucide="arrow-right" size="18"></i></a>
+                    </div>
+                    <!-- Category 2 -->
+                    <div class="reveal-pop" style="background: var(--bg-card); border-radius: 40px; padding: 3rem; border: 1px solid var(--border); transition: all 0.4s ease; transition-delay: 0.1s; cursor: pointer;" onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
+                        <div style="width: 80px; height: 80px; background: #EFF6FF; color: var(--accent); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+                            <i data-lucide="users" size="40"></i>
+                        </div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">Community CPR</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Essential skills for parents, teachers, and coaches. Simplified, effective training.</p>
+                        <a href="pricing.html" style="color: var(--accent); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">View Classes <i data-lucide="arrow-right" size="18"></i></a>
+                    </div>
+                    <!-- Category 3 -->
+                    <div class="reveal-pop" style="background: var(--bg-card); border-radius: 40px; padding: 3rem; border: 1px solid var(--border); transition: all 0.4s ease; transition-delay: 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
+                        <div style="width: 80px; height: 80px; background: #F0FDF4; color: #16A34A; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+                            <i data-lucide="activity" size="40"></i>
+                        </div>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">Advanced Support</h3>
+                        <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">ACLS & PALS</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Critical care and pediatric advanced life support modules for ICU/ER staff.</p>
+                        <a href="pricing.html" style="color: #16A34A; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">View Classes <i data-lucide="arrow-right" size="18"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Blended Learning Process -->
+        <section style="padding: 140px 0; background: var(--bg-dark); color: white; overflow: hidden;">
+            <div class="container">
+                <div class="grid items-center" style="grid-template-columns: 1fr 1.2fr; gap: 8rem;">
+                    <div class="reveal-left" style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" style="width: 100%; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                        <div style="position: absolute; -bottom: 40px; -right: 40px; background: var(--primary); padding: 2.5rem; border-radius: 30px; box-shadow: var(--shadow-lg);" class="reveal-pop">
+                            <h4 style="font-size: 2.5rem; margin: 0; line-height: 1;">100%</h4>
+                            <p style="margin: 0; opacity: 0.8; font-weight: 700;">AHA Compliant</p>
+                        </div>
+                    </div>
+                    <div class="reveal-right">
+                        <h2 style="font-size: 3rem; margin-bottom: 3rem;">How it Works: <span style="color: var(--primary);">Blended Learning</span></h2>
+                        <div style="display: flex; flex-direction: column; gap: 3.5rem;">
+                            <div class="flex gap-6">
+                                <div style="flex-shrink: 0; width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary);">01</div>
+                                <div>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Online Theory</h4>
+                                    <p style="opacity: 0.7; line-height: 1.7;">Complete 10 interactive modules at your own pace from any device. Mobile-optimized learning for your busy schedule.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div style="flex-shrink: 0; width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary);">02</div>
+                                <div>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">In-Person Lab</h4>
+                                    <p style="opacity: 0.7; line-height: 1.7;">Join our world-class medical instructors for 120 minutes of high-intensity, hands-on skill validation using active feedback manikins.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div style="flex-shrink: 0; width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary);">03</div>
+                                <div>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Instant eCard</h4>
+                                    <p style="opacity: 0.7; line-height: 1.7;">Receive your official certification via email before you even leave our facility. Valid for 2 years internationally.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Performance Statistics -->
+        <section style="padding: 100px 0; background: var(--bg-page); border-bottom: 1px solid var(--border);">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; gap: 4rem;">
+                    <div class="reveal-up" style="transition-delay: 0.1s;">
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">22k+</h4>
+                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Professionals Certified</p>
+                    </div>
+                    <div class="reveal-up" style="transition-delay: 0.2s;">
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">99.4%</h4>
+                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Satisfaction Rate</p>
+                    </div>
+                    <div class="reveal-up" style="transition-delay: 0.3s;">
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">12h</h4>
+                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Average Delivery Time</p>
+                    </div>
+                    <div class="reveal-up" style="transition-delay: 0.4s;">
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">14+</h4>
+                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">State-of-art Labs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Final Booking Board -->
+        <section class="final-cta" style="padding: 140px 0; background: #0F172A; position: relative; overflow: hidden;">
+             <!-- Abstract Circles for Flair -->
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(220, 38, 38, 0.1); border-radius: 50%; filter: blur(80px);"></div>
+            <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: rgba(37, 99, 235, 0.1); border-radius: 50%; filter: blur(80px);"></div>
+            
+            <div class="container">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 6rem 3rem; text-align: center; backdrop-filter: blur(20px);" class="reveal-pop">
+                    <h2 style="font-size: 4rem; color: white; margin-bottom: 2rem; font-weight: 900;">Ready to Become <br><span style="color: var(--primary);">Lifesaver Ready?</span></h2>
+                    <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 4rem; font-size: 1.25rem;">Secure your spot in our upcoming medical labs. Individual, private, and group sessions available weekly.</p>
+                    <div class="flex justify-center gap-6" style="flex-wrap: wrap;">
+                        <a href="signup.html" class="btn btn-primary" style="padding: 1.5rem 4rem; font-size: 1.125rem;">Book Lab Skills Today</a>
+                        <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white; padding: 1.5rem 4rem; font-size: 1.125rem;">Corporate Group Booking</a>
+                    </div>
+                    <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6; color: white;">
+                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> AHA Certified</div>
+                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> Red Cross Partner</div>
+                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> OSHA Approved</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 2rem;">
+                        <i data-lucide="heart-pulse"></i>
+                        <span>LifeForce</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Empowering heroes since 2011. Certified emergency medical training delivered by professionals with 15+ years of experience.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="pricing.html">Corporate Training</a></li>
+                        <li><a href="contact.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Details -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links" style="pointer-events: none;">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" size="18" style="color: var(--primary);"></i> 123 Lifesaver Way, TX</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" size="18" style="color: var(--primary);"></i> (555) 012-3456</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" size="18" style="color: var(--primary);"></i> info@lifeforce.com</li>
+                    </ul>
+                </div>
+                <!-- Social Icons -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+
+                        <a href="#" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LifeForce CPR & First Aid Training Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

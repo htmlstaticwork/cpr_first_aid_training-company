@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Support & Group Booking | LifeForce Training</title>
+    <meta name="description" content="Reach out to LifeForce CPR & First Aid Training. We offer 24/7 support for group bookings, certification inquiries, and course scheduling.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container flex items-center justify-between" style="height: 100%;">
+            <div class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></div>
+            <nav>
+                <ul><li><a href="index.html">Home 1</a></li><li><a href="home2.html">Home 2</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
+            </nav>
+            <div class="header-ctas">
+                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
+                <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="courses.html" class="btn btn-primary">Book Training</a>
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="menu-overlay" id="menu-overlay"></div>
+            <div class="nav-menu" id="nav-menu">
+                <div class="logo" style="margin-bottom: 2.5rem;">
+                    <i data-lucide="heart-pulse"></i>
+                    <span>LifeForce</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="mobile-ctas">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="courses.html" class="btn btn-primary">Book Training</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero with Background -->
+        <section class="hero" id="hero" style="background-image: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1600&auto=format&fit=crop');">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content reveal-zoom-out">
+                    <span style="color: var(--primary); font-weight: 800; font-size: 1.125rem;">CONNECT WITH US</span>
+                    <h1 style="font-size: 4rem; margin: 1.5rem 0; font-weight: 900;">Ready to <span style="color: var(--primary);">Respond</span>?</h1>
+                    <p style="max-width: 600px; font-size: 1.25rem;">Whether you're an individual or a global enterprise, we're here to facilitate your life-saving journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Ticket-Style Support Blocks -->
+        <section class="support-tickets" style="padding: 120px 0;">
+            <div class="container reveal">
+                <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <div style="border: 1px solid var(--border-light); padding: 3rem; border-radius: 24px; border-top: 6px solid var(--primary);">
+                        <i data-lucide="help-circle" style="color: var(--primary);"></i>
+                        <h3 style="margin: 1.5rem 0 1rem;">General Support</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Common questions about course materials or certification dates.</p>
+                        <a href="mailto:support@lifeforce.com" style="color: var(--primary); font-weight: 700; text-decoration: none;">Launch Ticket →</a>
+                    </div>
+                    <div style="border: 1px solid var(--border-light); padding: 3rem; border-radius: 24px; border-top: 6px solid var(--accent);">
+                        <i data-lucide="building" style="color: var(--accent);"></i>
+                        <h3 style="margin: 1.5rem 0 1rem;">Corporate Sales</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Inquire about on-site training for your workforce and group rates.</p>
+                        <a href="mailto:sales@lifeforce.com" style="color: var(--accent); font-weight: 700; text-decoration: none;">Request Quote →</a>
+                    </div>
+                    <div style="border: 1px solid var(--border-light); padding: 3rem; border-radius: 24px; border-top: 6px solid #059669;">
+                        <i data-lucide="credit-card" style="color: #059669;"></i>
+                        <h3 style="margin: 1.5rem 0 1rem;">Billing Department</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Questions regarding invoices, refunds, or volume licensing portal.</p>
+                        <a href="mailto:billing@lifeforce.com" style="color: #059669; font-weight: 700; text-decoration: none;">Contact Billing →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Detailed Facility Cards -->
+        <section class="facility-details" style="background: var(--bg-page); padding: 120px 0;">
+            <div class="container reveal">
+                <h2 style="margin-bottom: 4rem; text-align: center;">Visit Our Flagship Hubs</h2>
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 3rem;">
+                    <div style="background: var(--bg-card); border-radius: 32px; overflow: hidden; display: flex; box-shadow: var(--shadow);">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=400&auto=format&fit=crop" style="width: 200px; object-fit: cover;">
+                        <div style="padding: 2.5rem;">
+                            <h3>NYC Discovery Center</h3>
+                            <p style="color: var(--text-secondary); margin: 1rem 0;">123 Fifth Ave, Manhattan. Featuring our advanced sim labs and VR theater.</p>
+                            <span style="font-weight: 700;">Open Daily: 8am - 8pm</span>
+                        </div>
+                    </div>
+                    <div style="background: var(--bg-card); border-radius: 32px; overflow: hidden; display: flex; box-shadow: var(--shadow);">
+                        <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=400&auto=format&fit=crop" style="width: 200px; object-fit: cover;">
+                        <div style="padding: 2.5rem;">
+                            <h3>London Academy</h3>
+                            <p style="color: var(--text-secondary); margin: 1rem 0;">45 Baker St. Home to our European clinical research and instructor board.</p>
+                            <span style="font-weight: 700;">Open Daily: 9am - 6pm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Form with Step Sidebar -->
+        <section class="contact-with-steps" style="padding: 120px 0;">
+            <div class="container reveal">
+                <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 5rem;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2.5rem;">Direct Inquiry</h2>
+                        <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <input type="text" placeholder="First Name" style="padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;">
+                            <input type="text" placeholder="Last Name" style="padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;">
+                            <input type="email" placeholder="Email Address" style="grid-column: span 2; padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;">
+                            <textarea placeholder="Message" rows="6" style="grid-column: span 2; padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;"></textarea>
+                            <button class="btn btn-primary" style="grid-column: span 2; padding: 1.25rem;">Dispatch Message</button>
+                        </form>
+                    </div>
+                    <div style="background: var(--bg-dark); color: white; padding: 3rem; border-radius: 32px;">
+                        <h3 style="margin-bottom: 2rem;">What Happens Next?</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
+                            <li class="flex gap-4">
+                                <span style="color: var(--primary); font-weight: 800;">01</span>
+                                <p style="font-size: 0.875rem; opacity: 0.7;">Your message is routed to the specialized advisor for your region.</p>
+                            </li>
+                             <li class="flex gap-4">
+                                <span style="color: var(--primary); font-weight: 800;">02</span>
+                                <p style="font-size: 0.875rem; opacity: 0.7;">We review your requirements and check course availability in your hub.</p>
+                            </li>
+                             <li class="flex gap-4">
+                                <span style="color: var(--primary); font-weight: 800;">03</span>
+                                <p style="font-size: 0.875rem; opacity: 0.7;">You'll receive a personalized response or quote within 4 business hours.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Trust Indicators (Compact Strip) -->
+        <section class="trust-indicators" style="border-top: 1px solid var(--border-light); padding: 60px 0; background: var(--bg-page);">
+            <div class="container reveal">
+                <div class="flex justify-between items-center" style="gap: 2rem; flex-wrap: wrap;">
+                    <div style="text-align: center; flex: 1;"><h3 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--primary);">99.9%</h3><p style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Uptime Support</p></div>
+                    <div style="text-align: center; flex: 1;"><h3 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--primary);">48 Hours</h3><p style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Average Turnaround</p></div>
+                    <div style="text-align: center; flex: 1;"><h3 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--primary);">24/7</h3><p style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Digital Portal Access</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 2rem;">
+                        <i data-lucide="heart-pulse"></i>
+                        <span>LifeForce</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Empowering heroes since 2011. Certified emergency medical training delivered by professionals with 15+ years of experience.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="pricing.html">Corporate Training</a></li>
+                        <li><a href="contact.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Details -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links" style="pointer-events: none;">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" size="18" style="color: var(--primary);"></i> 123 Lifesaver Way, TX</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" size="18" style="color: var(--primary);"></i> (555) 012-3456</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" size="18" style="color: var(--primary);"></i> info@lifeforce.com</li>
+                    </ul>
+                </div>
+                <!-- Social Icons -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+
+                        <a href="#" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LifeForce CPR & First Aid Training Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

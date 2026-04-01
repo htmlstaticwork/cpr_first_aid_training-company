@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Create Account | LifeForce Training</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-page); padding: 1.5rem; }
+        .auth-card { background: var(--bg-card); padding: 2.5rem; border-radius: 24px; box-shadow: var(--shadow-lg); width: 100%; max-width: 500px; text-align: center; overflow-y: auto; max-height: 95vh; }
+        .auth-toggles { position: fixed; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 100; }
+        .auth-form { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; }
+        .form-group-full { grid-column: span 2; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.8rem; }
+        .input-group input { width: 100%; padding: 0.75rem 1rem; border-radius: 10px; border: 1.5px solid var(--border-light); font-size: 1rem; background: var(--bg-card); transition: border-color 0.2s; }
+        .input-group input:focus { border-color: var(--primary); outline: none; }
+        .input-group { position: relative; }
+        .eye-icon { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-secondary); }
+        body.dark-mode .auth-card { background: var(--card-dark); border: 1px solid var(--border-dark); }
+        body.dark-mode .input-group input { background: var(--bg-dark); border-color: var(--border-dark); color: var(--text-primary-dark); }
+    </style>
+</head>
+<body>
+
+    <div class="auth-toggles">
+        <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
+        <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
+    </div>
+
+    <div class="auth-card fade-in active">
+        <div class="logo" style="justify-content: center; margin-bottom: 0.5rem;">
+            <i data-lucide="heart-pulse"></i>
+            <span>LifeForce</span>
+        </div>
+        <h2 style="margin-bottom: 0.25rem;">Start Life-Saving Training</h2>
+        <p style="color: var(--text-secondary); font-size: 0.875rem;">Join a community of certified heroes.</p>
+
+        <form class="auth-form">
+            <div class="form-group">
+                <label>First Name</label>
+                <div class="input-group">
+                    <input type="text" placeholder="John" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Doe" required>
+                </div>
+            </div>
+            <div class="form-group-full">
+                <label>Email Address</label>
+                <div class="input-group">
+                    <input type="email" placeholder="name@company.com" required>
+                </div>
+            </div>
+            <div class="form-group-full">
+                <label>Password</label>
+                <div class="input-group">
+                    <input type="password" placeholder="••••••••" required id="p1">
+                    <i data-lucide="eye" class="eye-icon" id="t1"></i>
+                </div>
+            </div>
+            <div class="form-group-full">
+                <label>Confirm Password</label>
+                <div class="input-group">
+                    <input type="password" placeholder="••••••••" required id="p2">
+                    <i data-lucide="eye" class="eye-icon" id="t2"></i>
+                </div>
+            </div>
+
+            <div class="form-group-full">
+                <label class="flex items-center gap-2" style="font-size: 0.875rem; cursor: pointer;">
+                    <input type="checkbox" style="accent-color: var(--primary);" required> I agree to the <a href="#" style="color: var(--primary);">Terms & Conditions</a>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-group-full" style="padding: 1rem; font-size: 1rem; justify-content: center; margin-top: 1rem;">Create Hero Account</button>
+        </form>
+
+        <div style="margin: 1.5rem 0; position: relative;">
+            <hr style="border: 0; border-top: 1px solid var(--border-light);"><span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--bg-card); padding: 0 1rem; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Or via social</span>
+        </div>
+
+        <div class="flex gap-4">
+            <button class="btn btn-secondary" style="flex:1; border-radius: 12px; gap: 0.5rem;"><img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" style="width:20px;"> Google</button>
+            <button class="btn btn-secondary" style="flex:1; border-radius: 12px; gap: 0.5rem;"><i data-lucide="apple" size="20"></i> Apple</button>
+        </div>
+
+        <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+            Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Log In Instead</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+        const setupEye = (id, toggler) => {
+            const pwm = document.getElementById(toggler);
+            const pwi = document.getElementById(id);
+            pwm.addEventListener('click', () => {
+                const type = pwi.getAttribute('type') === 'password' ? 'text' : 'password';
+                pwi.setAttribute('type', type);
+                pwm.innerHTML = type === 'password' ? '<i data-lucide="eye"></i>' : '<i data-lucide="eye-off"></i>';
+                lucide.createIcons();
+            });
+        };
+        setupEye('p1', 't1');
+        setupEye('p2', 't2');
+    </script>
+</body>
+</html>
