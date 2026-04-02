@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!header) return;
         if (window.scrollY > 50) {
             header.style.height = '65px';
-            header.style.background = document.body.classList.contains('dark-mode') ? 'var(--glass-dark)' : 'var(--glass)';
+            header.style.background = 'var(--bg-card)';
         } else {
             header.style.height = '80px';
-            header.style.background = document.body.classList.contains('dark-mode') ? 'var(--glass-dark)' : 'var(--glass)';
+            header.style.background = 'var(--bg-card)';
         }
     });
 

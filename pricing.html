@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certification Pricing | LifeForce Training</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Affordable certification plans for individuals and corporate groups. Compare our CPR, AED, and First Aid training packages.">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -13,7 +14,7 @@
     <!-- Header -->
     <header>
         <div class="container flex items-center justify-between" style="height: 100%;">
-            <div class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></div>
+            <a href="index.html" class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></a>
             <nav>
                 <ul><li><a href="index.html">Home 1</a></li><li><a href="home2.html">Home 2</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html" class="active">Pricing</a></li><li><a href="contact.html">Contact</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
             </nav>
@@ -30,10 +31,10 @@
             <!-- Mobile Navigation Menu -->
             <div class="menu-overlay" id="menu-overlay"></div>
             <div class="nav-menu" id="nav-menu">
-                <div class="logo" style="margin-bottom: 2.5rem;">
+                <a href="index.html" class="logo" style="margin-bottom: 2.5rem;">
                     <i data-lucide="heart-pulse"></i>
                     <span>LifeForce</span>
-                </div>
+                </a>
                 <ul>
                     <li><a href="index.html">Home 1</a></li>
                     <li><a href="home2.html">Home 2</a></li>
@@ -117,27 +118,31 @@
         <!-- Section 3: Vertical Feature Comparison -->
         <section class="side-comparison" style="padding: 120px 0;">
             <div class="container reveal">
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 8rem;">
+                <div class="grid comparison-grid" style="grid-template-columns: 1fr 1fr; gap: 6rem;">
                     <div>
                         <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Compare the Experience</h2>
                         <p style="color: var(--text-secondary); margin-bottom: 3rem;">Every plan includes our signature hands-on lab training with certified medical instructors.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
-                            <li class="flex items-start gap-4">
-                                <i data-lucide="check-circle" style="color: var(--primary); margin-top: 0.25rem;"></i>
-                                <div><h4 style="margin-bottom: 0.5rem;">AHA Approved Curriculum</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Access standard life-saving materials immediately.</p></div>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="flex-shrink: 0; padding-top: 0.25rem;">
+                                    <i data-lucide="check-circle" style="color: var(--primary); display: block;" size="24"></i>
+                                </div>
+                                <div><h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">AHA Approved Curriculum</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Access standard life-saving materials immediately.</p></div>
                             </li>
-                            <li class="flex items-start gap-4">
-                                <i data-lucide="check-circle" style="color: var(--primary); margin-top: 0.25rem;"></i>
-                                <div><h4 style="margin-top: 0;">Multi-device Portal</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Study on your phone, tablet, or desktop with ease.</p></div>
+                            <li style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <div style="flex-shrink: 0; padding-top: 0.25rem;">
+                                    <i data-lucide="check-circle" style="color: var(--primary); display: block;" size="24"></i>
+                                </div>
+                                <div><h4 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--text-primary);">Multi-device Portal</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Study on your phone, tablet, or desktop with ease.</p></div>
                             </li>
                         </ul>
                     </div>
-                    <div style="background: var(--bg-page); padding: 4rem; border-radius: 40px;">
-                        <h3 style="margin-bottom: 2.5rem;">Professional Add-ons</h3>
+                    <div style="background: var(--bg-card); padding: 3rem; border-radius: 40px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 2.5rem; color: var(--text-primary);">Professional Add-ons</h3>
                          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
-                            <li class="flex justify-between items-center"><span style="font-weight: 600;">Standard Wallet Card</span> <span style="font-weight: 800; color: var(--primary);">FREE</span></li>
-                            <li class="flex justify-between items-center"><span style="font-weight: 600;">Premium Hardcopy Certificate</span> <span style="font-weight: 800;">$15</span></li>
-                            <li class="flex justify-between items-center"><span style="font-weight: 600;">Annual Skills Refresh</span> <span style="font-weight: 800; color: var(--primary);">INCLUDED</span></li>
+                            <li class="flex justify-between items-center"><span style="font-weight: 600; color: var(--text-primary);">Standard Wallet Card</span> <span style="font-weight: 800; color: var(--primary);">FREE</span></li>
+                            <li class="flex justify-between items-center"><span style="font-weight: 600; color: var(--text-primary);">Premium Hardcopy Certificate</span> <span style="font-weight: 800; color: var(--text-primary);">$15</span></li>
+                            <li class="flex justify-between items-center"><span style="font-weight: 600; color: var(--text-primary);">Annual Skills Refresh</span> <span style="font-weight: 800; color: var(--primary);">INCLUDED</span></li>
                         </ul>
                     </div>
                 </div>
@@ -208,10 +213,10 @@
             <div class="footer-grid">
                 <!-- Company Info -->
                 <div class="footer-col">
-                    <div class="logo" style="margin-bottom: 2rem;">
+                    <a href="index.html" class="logo" style="margin-bottom: 2rem;">
                         <i data-lucide="heart-pulse"></i>
                         <span>LifeForce</span>
-                    </div>
+                    </a>
                     <p style="color: var(--text-secondary); line-height: 1.8;">
                         Empowering heroes since 2011. Certified emergency medical training delivered by professionals with 15+ years of experience.
                     </p>

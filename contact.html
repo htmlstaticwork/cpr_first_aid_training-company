@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Support & Group Booking | LifeForce Training</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Reach out to LifeForce CPR & First Aid Training. We offer 24/7 support for group bookings, certification inquiries, and course scheduling.">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -13,7 +14,7 @@
     <!-- Header -->
     <header>
         <div class="container flex items-center justify-between" style="height: 100%;">
-            <div class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></div>
+            <a href="index.html" class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></a>
             <nav>
                 <ul><li><a href="index.html">Home 1</a></li><li><a href="home2.html">Home 2</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
             </nav>
@@ -30,10 +31,10 @@
             <!-- Mobile Navigation Menu -->
             <div class="menu-overlay" id="menu-overlay"></div>
             <div class="nav-menu" id="nav-menu">
-                <div class="logo" style="margin-bottom: 2.5rem;">
+                <a href="index.html" class="logo" style="margin-bottom: 2.5rem;">
                     <i data-lucide="heart-pulse"></i>
                     <span>LifeForce</span>
-                </div>
+                </a>
                 <ul>
                     <li><a href="index.html">Home 1</a></li>
                     <li><a href="home2.html">Home 2</a></li>
@@ -88,12 +89,25 @@
                     <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
                         <div style="width: 80px; height: 80px; background: #F0FDF4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10B981; margin: 0 auto 2.5rem;"><i data-lucide="share-2" size="36"></i></div>
                         <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 2rem; font-weight: 800;">Follow Us</h3>
-                        <div class="flex justify-center gap-10">
-                            <a href="#" class="social-icon-link" style="color: var(--text-secondary); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;"><i data-lucide="facebook" size="32"></i></a>
-                            <a href="#" class="social-icon-link" style="color: var(--text-secondary); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;"><i data-lucide="instagram" size="32"></i></a>
-                            <a href="#" class="social-icon-link" style="color: var(--text-secondary); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;"><i data-lucide="linkedin" size="32"></i></a>
+                        <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem;">
+                            <a href="https://facebook.com" target="_blank" class="social-icon-link">
+                                <div class="social-circle">
+                                    <i data-lucide="facebook" size="24"></i>
+                                </div>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-icon-link">
+                                <div class="social-circle">
+                                    <i data-lucide="instagram" size="24"></i>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon-link">
+                                <div class="social-circle">
+                                    <i data-lucide="linkedin" size="24"></i>
+                                </div>
+                            </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -177,10 +191,10 @@
             <div class="footer-grid">
                 <!-- Company Info -->
                 <div class="footer-col">
-                    <div class="logo" style="margin-bottom: 2rem;">
+                    <a href="index.html" class="logo" style="margin-bottom: 2rem;">
                         <i data-lucide="heart-pulse"></i>
                         <span>LifeForce</span>
-                    </div>
+                    </a>
                     <p style="color: var(--text-secondary); line-height: 1.8;">
                         Empowering heroes since 2011. Certified emergency medical training delivered by professionals with 15+ years of experience.
                     </p>

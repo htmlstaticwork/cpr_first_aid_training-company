@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | LifeForce Student Portal</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -69,9 +70,9 @@
             .sidebar-nav li a { justify-content: flex-start; }
             
             .menu-toggle { display: block; }
-            .dash-header { padding: 0 1rem; }
-            .dash-body { padding: 1.5rem; } 
-            .course-list { grid-template-columns: 1fr; } 
+            .dash-header { padding: 0 1.5rem; }
+            .dash-body { padding: 2rem; } 
+            .course-list { grid-template-columns: 1fr; gap: 1.5rem; } 
             
             .sidebar-overlay { 
                 display: none; 
@@ -83,6 +84,24 @@
             .sidebar-overlay.show { display: block; }
         }
 
+        /* Responsive Fixes for Cards */
+        .dash-body { 
+            padding: 3rem; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .dash-body { padding: 2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .dash-body { padding: 1.25rem; }
+            .welcome-card { padding: 1.5rem; border-radius: 16px; }
+            .stat-card { padding: 1.25rem; border-radius: 16px; }
+        }
+
         /* Dynamic Tabs */
         .tab-pane { display: none; animation: fadeIn 0.4s ease-out; }
         .tab-pane.active { display: block; }
@@ -90,6 +109,58 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Dashboard Header */
+        .dash-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: auto;
+            min-height: 75px;
+            padding: 1.25rem 2rem;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 500;
+        }
+
+        .header-top-mobile { display: flex; width: 100%; justify-content: flex-end; align-items: center; gap: 1.5rem; }
+        .header-bottom-mobile { display: flex; width: 100%; align-items: center; gap: 1rem; border-top: 1px solid var(--border-light); padding-top: 0.75rem; }
+
+        @media (min-width: 769px) {
+            .dash-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 75px;
+                padding: 0 2rem;
+            }
+            .dash-header h2 { font-size: 1.5rem !important; }
+            .header-top-mobile { width: auto; order: 2; }
+            .header-bottom-mobile { width: auto; order: 1; border-top: none; padding-top: 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hidden-mobile { display: none; }
+            .dash-header { padding: 1rem !important; }
+            .header-top-mobile { gap: 1rem; }
+        }
+
+        /* RTL Specifics for Dashboard */
+        body.rtl .sidebar { 
+            border-left: 1px solid rgba(255,255,255,0.05); 
+            border-right: none;
+        }
+
+        @media (max-width: 768px) {
+            body.rtl .sidebar {
+                left: auto;
+                right: 0;
+                transform: translateX(100%);
+            }
+            body.rtl .sidebar.show {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
@@ -116,20 +187,21 @@
 
     <main class="main-content">
         <header class="dash-header">
-            <div class="flex items-center gap-4">
-                <button class="menu-toggle" id="menu-toggle"><i data-lucide="menu"></i></button>
-                <h2 style="font-size: 1.25rem;">Student Portal</h2>
+            <!-- Top Row: Navigation Toggle & Unified Utilities -->
+            <div class="header-top-mobile">
+                <button class="menu-toggle" id="menu-toggle" style="align-items: center; justify-content: center; flex-shrink: 0; margin-right: auto;"><i data-lucide="menu"></i></button>
+                <button class="icon-btn" id="rtl-toggle" style="flex-shrink: 0;"><i data-lucide="languages"></i></button>
+                <button class="icon-btn" id="theme-toggle" style="flex-shrink: 0;"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
+                <div style="position: relative; background: var(--bg-page); padding: 0.5rem; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i data-lucide="bell" size="20" style="color: var(--text-secondary);"></i>
+                    <div style="position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: var(--primary); border-radius: 50%; flex-shrink: 0; pointer-events: none;"></div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
             </div>
-            <div class="flex items-center gap-4">
-                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
-                <div class="flex items-center gap-2" style="background: var(--bg-page); padding: 0.5rem 1rem; border-radius: 50px;">
-                    <i data-lucide="bell" size="18" style="color: var(--text-secondary);"></i>
-                    <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%; margin-left: -15px; margin-top: -10px;"></div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover;">
-                    <span style="font-weight: 600; font-size: 0.875rem;">John Doe</span>
-                </div>
+
+            <!-- Bottom Row: Section Title -->
+            <div class="header-bottom-mobile">
+                <h2 style="font-size: 1.25rem; margin: 0; white-space: nowrap; font-weight: 700; color: var(--text-primary); transition: all 0.3s ease;">Student Portal</h2>
             </div>
         </header>
 
@@ -141,7 +213,7 @@
                         <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome back, John!</h1>
                         <p style="font-size: 1.125rem; opacity: 0.8;">You have a practical lab session in NYC tomorrow at 9 AM.</p>
                     </div>
-                    <a href="#" class="btn btn-primary" style="background: var(--bg-card); color: var(--bg-dark); font-weight: 700;">View Session Info</a>
+                    <a href="#" class="btn btn-primary" style="background: white; color: var(--bg-dark); font-weight: 700; border-color: white;">View Session Info</a>
                 </div>
 
                 <div class="stat-grid">

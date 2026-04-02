@@ -125,19 +125,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 header {
-    border-bottom: 1px solid var(--border-light);
-    height: 70px;
     width: 100%;
-    background: var(--glass);
-    backdrop-filter: blur(12px);
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
     position: fixed;
     top: 0;
     z-index: 1000;
 }
 
 body.dark-mode header {
-    background: var(--glass-dark);
-    border-bottom: 1px solid var(--border-dark);
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
 }
 
 header .container {
@@ -166,7 +164,7 @@ header .container {
     font-size: 1.5rem;
     text-decoration: none;
     line-height: 1;
-    color: var(--text-primary);
+    color: var(--primary);
     transition: transform 0.3s ease;
 }
 
@@ -519,20 +517,76 @@ body.dark-mode .social-icons a {
 }
 
 .social-icons a:hover {
-    background: var(--primary) !important;
-    color: #FFFFFF !important;
-    transform: translateY(-3px);
-    border-color: var(--primary) !important;
+    background: var(--primary);
+    color: white;
+    transform: translateY(-4px);
+    border-color: var(--primary);
 }
 
-/* Force Lucide SVG properties */
-.social-icons a i, 
-.social-icons a svg {
-    width: 22px !important;
-    height: 22px !important;
-    display: block !important;
+/* Contact Social Circles */
+.social-icon-link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-circle i,
+.social-circle svg {
+    color: white !important;
+    stroke: white !important;
+    display: block;
+}
+
+body.dark-mode .social-circle {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-circle {
+    width: 60px;
+    height: 60px;
+    background: #F3F4F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111827; /* Dark icon in light mode */
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-circle i, .social-circle svg {
+    color: inherit !important;
     stroke: currentColor !important;
-    stroke-width: 2px !important;
+}
+
+body.dark-mode .social-circle {
+    background: rgba(255,255,255,0.1);
+    color: white !important;
+    border-color: rgba(255,255,255,0.2);
+}
+
+.social-icon-link:hover .social-circle {
+    background: var(--primary) !important;
+    color: white !important;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+    border-color: var(--primary);
+}
+
+/* Force Lucide SVG visibility and boldness */
+[data-lucide], 
+.social-circle svg, 
+.social-icons svg {
+    stroke-width: 2.5px;
+    stroke: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body.dark-mode [data-lucide],
+body.dark-mode .social-circle svg,
+body.dark-mode .social-icons svg {
+    color: white !important;
 }
 
 .footer-bottom {
@@ -546,7 +600,24 @@ body.dark-mode .social-icons a {
 @media (max-width: 1024px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+    }
+
+    .footer-col {
+        text-align: left !important;
+    }
+
+    .footer-links li {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+        text-align: left !important;
+    }
+
+    .social-icons {
+        justify-content: flex-start !important;
     }
 }
 
@@ -847,13 +918,15 @@ body.dark-mode .sidebar {
         height: 100vh;
         background: var(--bg-card);
         z-index: 2000;
-        padding: 100px 2.5rem 3rem;
+        padding: 80px 2rem 3rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 30px rgba(0,0,0,0.1);
         border-left: 1px solid var(--border);
+        overflow-y: auto; /* Enable scrolling */
+        overflow-x: hidden;
     }
 
     .nav-menu.active {
@@ -863,7 +936,10 @@ body.dark-mode .sidebar {
     .nav-menu ul {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.25rem;
+        list-style: none; /* Removed bullets */
+        padding: 0;
+        margin: 0;
     }
 
     .nav-menu li a {
@@ -872,6 +948,25 @@ body.dark-mode .sidebar {
         color: var(--text-primary);
         display: block;
         padding: 0.5rem 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li a.active {
+        color: var(--primary);
+        padding-left: 1rem;
+        position: relative;
+    }
+
+    .nav-menu li a.active::before {
+        content: '';
+        position: absolute;
+        left: -0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 20px;
+        background: var(--primary);
+        border-radius: 4px;
     }
 
     .nav-menu .mobile-ctas {
@@ -888,6 +983,35 @@ body.dark-mode .sidebar {
         width: 100%;
         justify-content: center;
         padding: 1rem;
+    }
+
+    /* Benefits Section Centering on Mobile */
+    .benefits .grid {
+        text-align: center;
+    }
+
+    .benefits .flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .benefits h2 {
+        text-align: center;
+    }
+
+    /* Footer Alignment on Mobile */
+    .footer-col {
+        text-align: left;
+    }
+
+    .footer-links li {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
     }
 
     /* Menu Overlay */
@@ -919,9 +1043,83 @@ section {
     box-sizing: border-box;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
     .container {
         padding: 0 1.5rem;
+    }
+
+    .corporate, .corporate div {
+        text-align: left !important;
+    }
+
+    .mobile-center-btn {
+        justify-content: flex-start !important;
+    }
+
+    .narrative, .narrative div {
+        text-align: center !important;
+    }
+
+    .narrative .container .grid {
+        gap: 4rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    /* Team Slide & Mosaic for Tablet */
+    .team-slide .flex {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        overflow-x: visible !important;
+    }
+
+    .team-slide div[style*="min-width: 350px"] {
+        flex: 1 1 350px !important;
+        max-width: 450px !important;
+    }
+
+    .mosaic-gallery div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto !important;
+    }
+
+    .mosaic-gallery div[style*="grid-column: span 2"] {
+        grid-column: span 2 !important;
+    }
+
+    .mosaic-gallery div[style*="grid-row: span 2"] {
+        grid-row: span 1 !important;
+        height: 300px !important;
+    }
+
+    .blended-learning .blended-grid {
+        grid-template-columns: 1fr !important;
+        gap: 5rem !important;
+        text-align: left !important;
+    }
+
+    .blended-learning .reveal-left {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr !important;
+        gap: 4rem !important;
+    }
+
+    /* Program Cards Centering */
+    .program-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 3rem !important;
+    }
+
+    .program-card {
+        flex: 1 1 300px !important;
+        max-width: 450px !important;
     }
 }
 
@@ -952,6 +1150,12 @@ section {
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
+    .hero { min-height: 100vh; height: auto; display: flex; align-items: center; padding: 120px 1.5rem 80px; }
+    .hero h1 { font-size: 2.75rem; line-height: 1.1; margin-top: 20px; }
     .hero-content { text-align: center; margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2.25rem; }
+    .hero { padding-top: 100px; }
 }
