@@ -67,10 +67,10 @@
         <!-- Section 2: Quick Connect (Summary Cards) -->
         <section class="quick-connect" style="padding: 100px 0; background: var(--bg-page); position: relative; z-index: 5; margin-top: -60px;">
             <div class="container reveal">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
                     
                     <!-- Contact Card -->
-                    <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
+                    <div class="contact-card" style="background: var(--bg-card); padding: 3rem 1.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
                         <div class="category-icon-box red" style="border-radius: 50%;">
                             <i data-lucide="phone-call" size="36"></i>
                         </div>
@@ -80,7 +80,7 @@
                     </div>
 
                     <!-- Mail Card -->
-                    <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
+                    <div class="contact-card" style="background: var(--bg-card); padding: 3rem 1.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
                         <div class="category-icon-box blue" style="border-radius: 50%;">
                             <i data-lucide="mail-plus" size="36"></i>
                         </div>
@@ -90,7 +90,7 @@
                     </div>
 
                     <!-- Follow Card -->
-                    <div class="contact-card" style="background: var(--bg-card); padding: 4rem 2.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
+                    <div class="contact-card" style="background: var(--bg-card); padding: 3rem 1.5rem; border-radius: 40px; border: 1.5px solid var(--border); text-align: center;">
                         <div class="category-icon-box green" style="border-radius: 50%;">
                             <i data-lucide="share-2" size="36"></i>
                         </div>
@@ -126,12 +126,12 @@
             <div class="container reveal">
         <div class="grid contact-steps-grid" style="grid-template-columns: 2fr 1fr; gap: 5rem;">
                     <div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2.5rem;">Direct Inquiry</h2>
-                        <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                            <input type="text" placeholder="First Name" style="padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;">
-                            <input type="text" placeholder="Last Name" style="padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;">
-                            <input type="email" placeholder="Email Address" style="grid-column: span 2; padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;">
-                            <textarea placeholder="Message" rows="6" style="grid-column: span 2; padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px;"></textarea>
+                        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 2rem; word-break: break-word;">Direct Inquiry</h2>
+                        <form class="grid inquiry-form" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <input type="text" placeholder="First Name" style="padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px; width: 100%;">
+                            <input type="text" placeholder="Last Name" style="padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px; width: 100%;">
+                            <input type="email" placeholder="Email Address" style="grid-column: span 2; padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px; width: 100%;">
+                            <textarea placeholder="Message" rows="6" style="grid-column: span 2; padding: 1rem; border: 1.5px solid var(--border-light); border-radius: 12px; width: 100%;"></textarea>
                             <button class="btn btn-primary" style="grid-column: span 2; padding: 1.25rem;">Dispatch Message</button>
                         </form>
                     </div>

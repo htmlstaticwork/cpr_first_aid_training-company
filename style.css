@@ -515,11 +515,17 @@ body.dark-mode .social-icons a {
     color: #F9FAFB;
 }
 
-.social-icons a:hover {
-    background: var(--primary);
-    color: white;
+.social-icons a:hover,
+body.dark-mode .social-icons a:hover {
+    background: var(--primary) !important;
+    color: white !important;
     transform: translateY(-4px);
-    border-color: var(--primary);
+    border-color: var(--primary) !important;
+}
+
+body.dark-mode .social-icons a:hover svg {
+    color: white !important;
+    stroke: white !important;
 }
 
 /* Contact Social Circles */
@@ -567,7 +573,8 @@ body.dark-mode .social-circle {
     border-color: rgba(255,255,255,0.2);
 }
 
-.social-icon-link:hover .social-circle {
+.social-icon-link:hover .social-circle,
+body.dark-mode .social-icon-link:hover .social-circle {
     background: var(--primary) !important;
     color: white !important;
     transform: translateY(-5px) scale(1.1);
@@ -1106,6 +1113,7 @@ section {
     .team-slide .flex {
         flex-wrap: wrap !important;
         justify-content: center !important;
+        align-items: center !important;
         overflow-x: visible !important;
         gap: 2rem !important;
     }
@@ -1122,18 +1130,31 @@ section {
     }
 
 
-    .mosaic-gallery div[style*="grid-template-columns"] {
+    .mosaic-grid {
         grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto !important;
+        grid-auto-rows: 250px !important;
+        gap: 1rem !important;
     }
 
-    .mosaic-gallery div[style*="grid-column: span 2"] {
+    .mosaic-grid > div {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        height: 250px !important;
+    }
+
+    .mosaic-grid div[style*="grid-column: span 2"] {
         grid-column: span 2 !important;
     }
 
-    .mosaic-gallery div[style*="grid-row: span 2"] {
-        grid-row: span 1 !important;
-        height: 300px !important;
+    /* Small Mobile: Stack to 1 Column */
+    @media (max-width: 600px) {
+        .mosaic-grid {
+            grid-template-columns: 1fr !important;
+        }
+        .mosaic-grid > div,
+        .mosaic-grid div[style*="grid-column: span 2"] {
+            grid-column: span 1 !important;
+        }
     }
 
     .blended-learning .blended-grid {
@@ -1169,6 +1190,15 @@ section {
     .contact-steps-grid {
         grid-template-columns: 1fr !important;
         gap: 3rem !important;
+    }
+
+    .inquiry-form {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .inquiry-form > * {
+        grid-column: span 1 !important;
     }
 
     .contact-steps-grid > div:last-child {
