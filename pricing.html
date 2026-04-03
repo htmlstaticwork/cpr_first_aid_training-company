@@ -54,7 +54,7 @@
 
     <main>
         <!-- Section 1: Hero with Background -->
-        <section class="hero hero-compact" id="hero" style="background-image: var(--hero-bg); background-position: center;">
+        <section class="hero hero-compact" id="hero" style="background-image: url('https://images.pexels.com/photos/8943274/pexels-photo-8943274.jpeg'); background-position: center;">
             <div class="hero-overlay" style="background: var(--hero-overlay);"></div>
             <div class="container">
                 <div class="hero-content reveal-blur" style="color: var(--hero-text);">
@@ -77,7 +77,9 @@
                 <div class="pricing-stack">
                     <!-- Basic Responder -->
                     <div class="pricing-row">
-                        <div style="width: 80px; height: 80px; background: var(--bg-page); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary); border: 2px solid var(--border);"><i data-lucide="users" size="36"></i></div>
+                        <div class="category-icon-box blue" style="border-radius: 50%; border: 2px solid var(--border);">
+                            <i data-lucide="users" size="36"></i>
+                        </div>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Basic Responder</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">Standard CPR/AED certification for individuals, community members, and school staff.</p>
                         <div style="margin-bottom: 3rem;">
@@ -90,7 +92,9 @@
                     <!-- Universal Professional -->
                     <div class="pricing-row popular">
                         <div style="position: absolute; left: 50%; top: -18px; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.5rem 1.75rem; border-radius: 50px; font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; white-space: nowrap;">Most Popular track</div>
-                        <div style="width: 80px; height: 80px; background: #FEF2F2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary);"><i data-lucide="shield-check" size="36"></i></div>
+                        <div class="category-icon-box red" style="border-radius: 50%;">
+                            <i data-lucide="shield-check" size="36"></i>
+                        </div>
                         <h3 style="font-size: 2rem; margin-bottom: 1rem;">Universal Professional</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">Healthcare BLS & First Responder training. The gold standard for careers.</p>
                         <div style="margin-bottom: 3rem;">
@@ -102,7 +106,9 @@
 
                     <!-- Instructor Masterclass -->
                     <div class="pricing-row">
-                        <div style="width: 80px; height: 80px; background: var(--bg-page); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary); border: 2px solid var(--border);"><i data-lucide="graduation-cap" size="36"></i></div>
+                        <div class="category-icon-box green" style="border-radius: 50%; border: 2px solid var(--border);">
+                            <i data-lucide="graduation-cap" size="36"></i>
+                        </div>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Instructor Masterclass</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">Advanced train-the-trainer training for corporate safety officers and medical leads.</p>
                         <div style="margin-bottom: 3rem;">
@@ -245,15 +251,14 @@
                 <div class="footer-col">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                        <a href="#" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
-
-                        <a href="#" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="#" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17Z"></path><path d="m10 15 5-3-5-3z"></path></svg>
                         </a>
                     </div>
                 </div>

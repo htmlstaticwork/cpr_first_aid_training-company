@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Catalog | LifeForce Training</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Explore our wide range of certified CPR, AED, and First Aid courses. Find a class that fits your schedule and skill level.">
+    <meta name="description"
+        content="Explore our wide range of certified CPR, AED, and First Aid courses. Find a class that fits your schedule and skill level.">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
         <div class="container flex items-center justify-between" style="height: 100%;">
             <a href="index.html" class="logo"><i data-lucide="heart-pulse"></i><span>LifeForce</span></a>
-             <nav>
+            <nav>
                 <ul>
-                    <li><a href="index.html" >Home 1</a></li>
+                    <li><a href="index.html">Home 1</a></li>
                     <li><a href="home2.html">Home 2</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="courses.html" class="active">Courses</a></li>
@@ -27,7 +30,8 @@
                 </ul>
             </nav>
             <div class="header-ctas">
-                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
+                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon"
+                        id="moon-icon" style="display:none;"></i></button>
                 <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
                 <a href="login.html" class="btn btn-secondary">Login</a>
                 <a href="signup.html" class="btn btn-primary">Sign Up</a>
@@ -62,13 +66,22 @@
 
     <main>
         <!-- Section 1: Immersive Hero -->
-        <section class="hero" style="background-image: var(--hero-bg); min-height: 85vh; display: flex; align-items: center; background-position: center;">
+        <section class="hero"
+            style="background-image: var(--hero-bg); min-height: 85vh; display: flex; align-items: center; background-position: center;">
             <div class="hero-overlay" style="background: var(--hero-overlay);"></div>
             <div class="container">
-                <div class="hero-content reveal-blur" style="max-width: 900px; margin: 0 auto; text-align: center; color: var(--hero-text);">
-                    <span style="color: var(--primary); font-weight: 800; font-size: 1.125rem; letter-spacing: 2px; text-transform: uppercase;">AHA & Red Cross Certified</span>
-                    <h1 style="font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; margin: 2rem auto; font-weight: 900;">Life-Saving <span style="color: var(--primary);">Expertise</span>, Within Reach.</h1>
-                    <p style="font-size: clamp(1.125rem, 3vw, 1.5rem); opacity: 0.95; margin: 0 auto 3.5rem; font-weight: 600; max-width: 750px;">Choose the gold standard in emergency medical training. From basic first aid to advanced cardiac support, we empower you to act with precision.</p>
+                <div class="hero-content reveal-blur"
+                    style="max-width: 900px; margin: 0 auto; text-align: center; color: var(--hero-text);">
+                    <span
+                        style="color: var(--primary); font-weight: 800; font-size: 1.125rem; letter-spacing: 2px; text-transform: uppercase;">AHA
+                        & Red Cross Certified</span>
+                    <h1
+                        style="font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; margin: 2rem auto; font-weight: 900;">
+                        Life-Saving <span style="color: var(--primary);">Expertise</span>, Within Reach.</h1>
+                    <p
+                        style="font-size: clamp(1.125rem, 3vw, 1.5rem); opacity: 0.95; margin: 0 auto 3.5rem; font-weight: 600; max-width: 750px;">
+                        Choose the gold standard in emergency medical training. From basic first aid to advanced cardiac
+                        support, we empower you to act with precision.</p>
                     <div class="flex gap-4" style="justify-content: center;">
                         <a href="#categories" class="btn btn-primary" style="padding: 1.25rem 3rem;">Browse Catalog</a>
                         <a href="contact.html" class="btn btn-secondary" style="color: inherit;">Bulk Inquiries</a>
@@ -82,73 +95,111 @@
             <div class="container">
                 <div style="text-align: center; margin-bottom: 6rem;" class="reveal-up">
                     <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Pathways to Certification</h2>
-                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.125rem;">Select your professional track to view available schedules and specialized modules.</p>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.125rem;">
+                        Select your professional track to view available schedules and specialized modules.</p>
                 </div>
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
                     <!-- Category 1 -->
-                    <div class="reveal-pop" style="background: var(--bg-card); border-radius: 40px; padding: 3.5rem 3rem; border: 1px solid var(--border); transition: all 0.4s ease; cursor: pointer; transform: translateY(0); text-align: center;" onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
-                        <div style="width: 80px; height: 80px; background: #FEF2F2; color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                    <div class="reveal-pop"
+                        style="background: var(--bg-card); border-radius: 40px; padding: 3.5rem 3rem; border: 1px solid var(--border); transition: all 0.4s ease; cursor: pointer; transform: translateY(0); text-align: center;"
+                        onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
+                        <div class="category-icon-box red">
                             <i data-lucide="shield-plus" size="40"></i>
                         </div>
                         <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">Healthcare (BLS)</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Professional-grade life support training for nurses, doctors, and first responders.</p>
-                        <a href="pricing.html" style="color: var(--primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">View Classes <i data-lucide="arrow-right" size="18"></i></a>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Professional-grade life support
+                            training for nurses, doctors, and first responders.</p>
+                        <a href="pricing.html"
+                            style="color: var(--primary); font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">View
+                            Classes <i data-lucide="arrow-right" size="18"></i></a>
                     </div>
                     <!-- Category 2 -->
-                    <div class="reveal-pop" style="background: var(--bg-card); border-radius: 40px; padding: 3.5rem 3rem; border: 1px solid var(--border); transition: all 0.4s ease; transition-delay: 0.1s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
-                        <div style="width: 80px; height: 80px; background: #EFF6FF; color: var(--accent); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                    <div class="reveal-pop"
+                        style="background: var(--bg-card); border-radius: 40px; padding: 3.5rem 3rem; border: 1px solid var(--border); transition: all 0.4s ease; transition-delay: 0.1s; cursor: pointer; text-align: center;"
+                        onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
+                        <div class="category-icon-box blue">
                             <i data-lucide="users" size="40"></i>
                         </div>
                         <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">Community CPR</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Essential skills for parents, teachers, and coaches. Simplified, effective training.</p>
-                        <a href="pricing.html" style="color: var(--accent); font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">View Classes <i data-lucide="arrow-right" size="18"></i></a>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Essential skills for parents,
+                            teachers, and coaches. Simplified, effective training.</p>
+                        <a href="pricing.html"
+                            style="color: var(--accent); font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">View
+                            Classes <i data-lucide="arrow-right" size="18"></i></a>
                     </div>
                     <!-- Category 3 -->
-                    <div class="reveal-pop" style="background: var(--bg-card); border-radius: 40px; padding: 3.5rem 3rem; border: 1px solid var(--border); transition: all 0.4s ease; transition-delay: 0.2s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
-                        <div style="width: 80px; height: 80px; background: #F0FDF4; color: #16A34A; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                    <div class="reveal-pop"
+                        style="background: var(--bg-card); border-radius: 40px; padding: 3.5rem 3rem; border: 1px solid var(--border); transition: all 0.4s ease; transition-delay: 0.2s; cursor: pointer; text-align: center;"
+                        onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='var(--primary)';"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)';">
+                        <div class="category-icon-box green">
                             <i data-lucide="activity" size="40"></i>
                         </div>
                         <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">ACLS & PALS</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Critical care and pediatric advanced life support modules for ICU/ER staff.</p>
-                        <a href="pricing.html" style="color: #16A34A; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">View Classes <i data-lucide="arrow-right" size="18"></i></a>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Critical care and pediatric
+                            advanced life support modules for ICU/ER staff training.</p>
+                        <a href="pricing.html"
+                            style="color: #16A34A; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">View
+                            Classes <i data-lucide="arrow-right" size="18"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 3: Blended Learning Process -->
-        <section class="blended-learning" style="padding: 140px 0; background: var(--bg-dark); color: white; overflow: hidden;">
+        <section class="blended-learning"
+            style="padding: 140px 0; background: var(--bg-dark); color: white; overflow: hidden;">
             <div class="container">
                 <div class="grid items-center blended-grid" style="grid-template-columns: 1fr 1.2fr; gap: 6rem;">
                     <div class="reveal-left" style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" style="width: 100%; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
-                        <div style="position: absolute; bottom: -30px; right: 20px; background: var(--primary); padding: 1.5rem 2rem; border-radius: 24px; box-shadow: var(--shadow-lg);" class="reveal-pop">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+                            style="width: 100%; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                        <div style="position: absolute; bottom: -30px; right: 20px; background: var(--primary); padding: 1.5rem 2rem; border-radius: 24px; box-shadow: var(--shadow-lg);"
+                            class="reveal-pop">
                             <h4 style="font-size: 2.25rem; margin: 0; line-height: 1;">100%</h4>
                             <p style="margin: 0; opacity: 0.9; font-weight: 700; font-size: 0.875rem;">AHA Compliant</p>
                         </div>
                     </div>
                     <div class="reveal-right">
-                        <h2 style="font-size: 3rem; margin-bottom: 3rem;">How it Works: <span style="color: var(--primary);">Blended Learning</span></h2>
+                        <h2 style="font-size: 3rem; margin-bottom: 3rem;">How it Works: <span
+                                style="color: var(--primary);">Blended Learning</span></h2>
                         <div style="display: flex; flex-direction: column; gap: 3rem;">
                             <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                                <div style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary); color: white;">01</div>
+                                <div
+                                    style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary); color: white;">
+                                    01</div>
                                 <div>
-                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">Online Theory</h4>
-                                    <p style="opacity: 0.7; line-height: 1.6; color: rgba(255,255,255,0.8);">Complete 10 interactive modules at your own pace from any device. Mobile-optimized learning for your busy schedule.</p>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">Online Theory
+                                    </h4>
+                                    <p style="opacity: 0.7; line-height: 1.6; color: rgba(255,255,255,0.8);">Complete 10
+                                        interactive modules at your own pace from any device. Mobile-optimized learning
+                                        for your busy schedule.</p>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                                <div style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary); color: white;">02</div>
+                                <div
+                                    style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary); color: white;">
+                                    02</div>
                                 <div>
-                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">In-Person Lab</h4>
-                                    <p style="opacity: 0.7; line-height: 1.6; color: rgba(255,255,255,0.8);">Join our world-class medical instructors for 120 minutes of high-intensity, hands-on skill validation using active feedback manikins.</p>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">In-Person Lab
+                                    </h4>
+                                    <p style="opacity: 0.7; line-height: 1.6; color: rgba(255,255,255,0.8);">Join our
+                                        world-class medical instructors for 120 minutes of high-intensity, hands-on
+                                        skill validation using active feedback manikins.</p>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                                <div style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary); color: white;">03</div>
+                                <div
+                                    style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 2px solid var(--primary); color: white;">
+                                    03</div>
                                 <div>
-                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">Instant eCard</h4>
-                                    <p style="opacity: 0.7; line-height: 1.6; color: rgba(255,255,255,0.8);">Receive your official certification via email before you even leave our facility. Valid for 2 years internationally.</p>
+                                    <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: white;">Instant eCard
+                                    </h4>
+                                    <p style="opacity: 0.7; line-height: 1.6; color: rgba(255,255,255,0.8);">Receive
+                                        your official certification via email before you even leave our facility. Valid
+                                        for 2 years internationally.</p>
                                 </div>
                             </div>
                         </div>
@@ -160,22 +211,35 @@
         <!-- Section 4: Performance Statistics -->
         <section style="padding: 100px 0; background: var(--bg-page); border-bottom: 1px solid var(--border);">
             <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; gap: 4rem;">
+                <div class="grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; gap: 4rem;">
                     <div class="reveal-up" style="transition-delay: 0.1s;">
-                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">22k+</h4>
-                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Professionals Certified</p>
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">
+                            22k+</h4>
+                        <p
+                            style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">
+                            Professionals Certified</p>
                     </div>
                     <div class="reveal-up" style="transition-delay: 0.2s;">
-                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">99.4%</h4>
-                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Satisfaction Rate</p>
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">
+                            99.4%</h4>
+                        <p
+                            style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">
+                            Satisfaction Rate</p>
                     </div>
                     <div class="reveal-up" style="transition-delay: 0.3s;">
-                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">12h</h4>
-                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Average Delivery Time</p>
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">
+                            12h</h4>
+                        <p
+                            style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">
+                            Average Delivery Time</p>
                     </div>
                     <div class="reveal-up" style="transition-delay: 0.4s;">
-                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">14+</h4>
-                        <p style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">State-of-art Labs</p>
+                        <h4 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 900;">
+                            14+</h4>
+                        <p
+                            style="font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">
+                            State-of-art Labs</p>
                     </div>
                 </div>
             </div>
@@ -183,22 +247,37 @@
 
         <!-- Section 5: The Final Booking Board -->
         <section class="final-cta" style="padding: 140px 0; background: #0F172A; position: relative; overflow: hidden;">
-             <!-- Abstract Circles for Flair -->
-            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(220, 38, 38, 0.1); border-radius: 50%; filter: blur(80px);"></div>
-            <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: rgba(37, 99, 235, 0.1); border-radius: 50%; filter: blur(80px);"></div>
-            
+            <!-- Abstract Circles for Flair -->
+            <div
+                style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(220, 38, 38, 0.1); border-radius: 50%; filter: blur(80px);">
+            </div>
+            <div
+                style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: rgba(37, 99, 235, 0.1); border-radius: 50%; filter: blur(80px);">
+            </div>
+
             <div class="container">
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 6rem 3rem; text-align: center; backdrop-filter: blur(20px);" class="reveal-pop">
-                    <h2 style="font-size: 4rem; color: white; margin-bottom: 2rem; font-weight: 900;">Ready to Become <br><span style="color: var(--primary);">Lifesaver Ready?</span></h2>
-                    <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 4rem; font-size: 1.25rem;">Secure your spot in our upcoming medical labs. Individual, private, and group sessions available weekly.</p>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 6rem 3rem; text-align: center; backdrop-filter: blur(20px);"
+                    class="reveal-pop">
+                    <h2 style="font-size: 4rem; color: white; margin-bottom: 2rem; font-weight: 900;">Ready to Become
+                        <br><span style="color: var(--primary);">Lifesaver Ready?</span></h2>
+                    <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 4rem; font-size: 1.25rem;">
+                        Secure your spot in our upcoming medical labs. Individual, private, and group sessions available
+                        weekly.</p>
                     <div class="flex justify-center gap-6" style="flex-wrap: wrap;">
-                        <a href="signup.html" class="btn btn-primary" style="padding: 1.5rem 4rem; font-size: 1.125rem;">Book Lab Skills Today</a>
-                        <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white; padding: 1.5rem 4rem; font-size: 1.125rem;">Corporate Group Booking</a>
+                        <a href="signup.html" class="btn btn-primary"
+                            style="padding: 1.5rem 4rem; font-size: 1.125rem;">Book Lab Skills Today</a>
+                        <a href="contact.html" class="btn btn-secondary"
+                            style="border-color: white; color: white; padding: 1.5rem 4rem; font-size: 1.125rem;">Corporate
+                            Group Booking</a>
                     </div>
-                    <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6; color: white;">
-                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> AHA Certified</div>
-                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> Red Cross Partner</div>
-                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> OSHA Approved</div>
+                    <div
+                        style="margin-top: 4rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6; color: white;">
+                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> AHA Certified
+                        </div>
+                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> Red Cross
+                            Partner</div>
+                        <div class="flex items-center gap-2"><i data-lucide="shield-check" size="20"></i> OSHA Approved
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,7 +295,8 @@
                         <span>LifeForce</span>
                     </a>
                     <p style="color: var(--text-secondary); line-height: 1.8;">
-                        Empowering heroes since 2011. Certified emergency medical training delivered by professionals with 15+ years of experience.
+                        Empowering heroes since 2011. Certified emergency medical training delivered by professionals
+                        with 15+ years of experience.
                     </p>
                 </div>
                 <!-- Quick Links -->
@@ -234,24 +314,26 @@
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <ul class="footer-links" style="pointer-events: none;">
-                        <li class="flex items-center gap-2"><i data-lucide="map-pin" size="18" style="color: var(--primary);"></i> 123 Lifesaver Way, TX</li>
-                        <li class="flex items-center gap-2"><i data-lucide="phone" size="18" style="color: var(--primary);"></i> (555) 012-3456</li>
-                        <li class="flex items-center gap-2"><i data-lucide="mail" size="18" style="color: var(--primary);"></i> info@lifeforce.com</li>
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" size="18"
+                                style="color: var(--primary);"></i> 123 Lifesaver Way, TX</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" size="18"
+                                style="color: var(--primary);"></i> (555) 012-3456</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" size="18"
+                                style="color: var(--primary);"></i> info@lifeforce.com</li>
                     </ul>
                 </div>
                 <!-- Social Icons -->
                 <div class="footer-col">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                        <a href="#" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
-
-                        <a href="#" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="#" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17Z"></path><path d="m10 15 5-3-5-3z"></path></svg>
                         </a>
                     </div>
                 </div>
@@ -269,4 +351,5 @@
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>
 </body>
+
 </html>
