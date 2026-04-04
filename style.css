@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     width: 100%;
     box-sizing: border-box;
 }
@@ -1115,7 +1115,7 @@ section {
 
 @media (max-width: 1024px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 2rem;
     }
 
     .corporate, .corporate div {
@@ -1244,7 +1244,7 @@ section {
     }
     
     .container {
-        padding: 0 1.25rem;
+        padding: 0 1.75rem;
     }
     
     section {
@@ -1262,7 +1262,7 @@ section {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 }
 

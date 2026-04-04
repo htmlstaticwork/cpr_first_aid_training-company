@@ -9,6 +9,35 @@
     <meta name="description"
         content="Learn about our mission to provide certified life-saving skills. Meet our professional instructors and explore our state-of-the-art facilities.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .experience-badge {
+            position: absolute;
+            bottom: 40px;
+            left: -40px;
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .experience-badge {
+                left: 10px;
+                bottom: 10px;
+                padding: 0.875rem 1.25rem;
+                border-radius: 12px;
+            }
+            .experience-badge h4 {
+                font-size: 1.125rem !important;
+            }
+            .experience-badge p {
+                font-size: 0.7rem !important;
+            }
+        }
+    </style>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 
@@ -157,8 +186,7 @@
                                 style="width: 100%; display: block; filter: saturate(1.1);">
                         </div>
                         <!-- Micro Interaction Element -->
-                        <div style="position: absolute; bottom: 40px; left: -40px; background: var(--primary); color: white; padding: 1.5rem 2.5rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3); z-index: 3;"
-                            class="reveal-pop">
+                        <div class="experience-badge reveal-pop">
                             <h4 style="margin: 0; font-size: 1.5rem;">15+ Years</h4>
                             <p style="margin: 0; font-size: 0.875rem; opacity: 0.9;">In-Field Experience</p>
                         </div>
