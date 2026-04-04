@@ -800,6 +800,37 @@ section {
     transition: background 0.5s ease;
 }
 
+/* Uniform 3x3 Facility Grid */
+.mosaic-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.facility-card {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 280px;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.facility-card:hover img {
+    transform: scale(1.05);
+}
+
 /* Back to Top */
 .back-to-top {
     position: fixed;
@@ -1158,20 +1189,14 @@ section {
     }
 
 
+    /* Uniform 3x3 Facility Grid */
     .mosaic-grid {
-        grid-template-columns: 1fr 1fr !important;
-        grid-auto-rows: 250px !important;
-        gap: 1rem !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
     }
 
-    .mosaic-grid > div {
-        grid-column: span 1 !important;
-        grid-row: span 1 !important;
-        height: 250px !important;
-    }
-
-    .mosaic-grid div[style*="grid-column: span 2"] {
-        grid-column: span 2 !important;
+    .mosaic-grid .facility-card {
+        height: 240px !important;
     }
 
     /* Small Mobile: Stack to 1 Column */
@@ -1179,9 +1204,9 @@ section {
         .mosaic-grid {
             grid-template-columns: 1fr !important;
         }
-        .mosaic-grid > div,
-        .mosaic-grid div[style*="grid-column: span 2"] {
-            grid-column: span 1 !important;
+
+        .mosaic-grid .facility-card {
+            height: 220px !important;
         }
     }
 
