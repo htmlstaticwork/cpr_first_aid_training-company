@@ -46,7 +46,6 @@
 
         .sidebar-nav {
             list-style: none;
-            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
@@ -116,8 +115,11 @@
         }
 
         .dash-body {
-            padding: 2.5rem;
+            padding: 2.5rem 3rem;
             flex: 1;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .menu-toggle {
@@ -256,7 +258,7 @@
             }
 
             .dash-body {
-                padding: 2rem;
+                padding: 2.5rem;
             }
 
             .stat-grid {
@@ -297,9 +299,8 @@
             }
 
             .dash-header {
-                padding: 0 1.5rem;
+                padding: 0 2rem;
             }
-
             .dash-body {
                 padding: 2rem;
             }
@@ -325,33 +326,68 @@
             }
         }
 
-        /* Responsive Fixes for Cards */
-        .dash-body {
-            padding: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
+        /* Responsive Padding Fixes */
         @media (max-width: 1024px) {
             .dash-body {
+                padding: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dash-body {
                 padding: 2rem;
+            }
+
+            .welcome-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            .welcome-card h1 {
+                font-size: 1.75rem !important;
             }
         }
 
         @media (max-width: 480px) {
             .dash-body {
-                padding: 1.25rem;
+                padding: 1.75rem;
             }
 
             .welcome-card {
-                padding: 1.5rem;
+                padding: 1.5rem !important;
                 border-radius: 16px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.25rem;
+                text-align: left;
+            }
+
+            .welcome-card h1 {
+                font-size: 1.5rem !important;
+                line-height: 1.2 !important;
+            }
+
+            .welcome-card p {
+                font-size: 0.9375rem !important;
+            }
+
+            .welcome-card .btn {
+                width: 100% !important;
+                justify-content: center;
+                padding: 1rem !important;
             }
 
             .stat-card {
-                padding: 1.25rem;
-                border-radius: 16px;
+                padding: 1rem;
+                border-radius: 12px;
+                gap: 0.75rem;
+            }
+            .stat-card h3 {
+                font-size: 0.75rem !important;
+            }
+            .stat-card .stat-value {
+                font-size: 1.25rem !important;
             }
         }
 
@@ -388,6 +424,8 @@
             background: var(--bg-card);
             border-bottom: 1px solid var(--border-light);
             z-index: 500;
+            position: relative !important;
+            top: auto !important;
         }
 
         .header-top-mobile {
@@ -434,12 +472,8 @@
         }
 
         @media (max-width: 480px) {
-            .hidden-mobile {
-                display: none;
-            }
-
             .dash-header {
-                padding: 1rem !important;
+                padding: 1.5rem !important;
             }
 
             .header-top-mobile {
