@@ -19,10 +19,14 @@
                 <ul><li><a href="index.html">Home 1</a></li><li><a href="home2.html">Home 2</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
             </nav>
             <div class="header-ctas">
-                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
-                <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
-                <a href="login.html" class="btn btn-secondary">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="icon-btn theme-toggle desktop-only-toggle" title="Toggle Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+                </button>
+                <button class="rtl-btn rtl-toggle desktop-only-toggle" title="Toggle RTL">
+                    <span>RTL</span>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
                 <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <i data-lucide="menu"></i>
                 </button>
@@ -44,9 +48,17 @@
                     <li><a href="contact.html" class="active">Contact</a></li>
                     <li><a href="dashboard.html">Dashboard</a></li>
                 </ul>
+                <div class="menu-utilities mobile-only-toggle">
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-btn rtl-toggle" title="Toggle RTL">
+                        <span>RTL</span>
+                    </button>
+                </div>
                 <div class="mobile-ctas">
-                    <a href="login.html" class="btn btn-secondary">Login</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary">Login</a>
                 </div>
             </div>
         </div>

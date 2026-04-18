@@ -10,7 +10,7 @@
     <style>
         body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-page); padding: 2rem 1rem; margin: 0; }
         .auth-card { background: var(--bg-card); padding: 3.5rem 3rem 3rem; border-radius: 24px; box-shadow: var(--shadow-lg); width: 100%; max-width: 450px; text-align: center; position: relative; }
-        .auth-toggles { position: absolute; top: 1.25rem; right: 1.25rem; display: flex; gap: 0.5rem; z-index: 10; }
+        .auth-toggles { position: fixed; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.75rem; z-index: 1000; }
         .auth-form { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; text-align: left; }
         .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.875rem; }
         .input-group { position: relative; }
@@ -29,11 +29,14 @@
 </head>
 <body>
 
+    <div class="auth-toggles">
+        <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
+        <button class="rtl-btn" id="rtl-toggle" title="Toggle RTL">
+            <span>RTL</span>
+        </button>
+    </div>
+
     <div class="auth-card fade-in active">
-        <div class="auth-toggles">
-            <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
-            <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
-        </div>
         <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 0.75rem;">
             <i data-lucide="heart-pulse"></i>
             <span>LifeForce</span>

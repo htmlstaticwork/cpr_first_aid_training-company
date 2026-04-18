@@ -19,10 +19,14 @@
                 <ul><li><a href="index.html">Home 1</a></li><li><a href="home2.html">Home 2</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html" class="active">Pricing</a></li><li><a href="contact.html">Contact</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
             </nav>
             <div class="header-ctas">
-                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
-                <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
-                <a href="login.html" class="btn btn-secondary">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="icon-btn theme-toggle desktop-only-toggle" title="Toggle Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+                </button>
+                <button class="rtl-btn rtl-toggle desktop-only-toggle" title="Toggle RTL">
+                    <span>RTL</span>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
                 <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <i data-lucide="menu"></i>
                 </button>
@@ -44,9 +48,17 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="dashboard.html">Dashboard</a></li>
                 </ul>
+                <div class="menu-utilities mobile-only-toggle">
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-btn rtl-toggle" title="Toggle RTL">
+                        <span>RTL</span>
+                    </button>
+                </div>
                 <div class="mobile-ctas">
-                    <a href="login.html" class="btn btn-secondary">Login</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary">Login</a>
                 </div>
             </div>
         </div>
@@ -202,12 +214,12 @@
         <section class="trust-strip" style="padding: 100px 0; text-align: center;">
             <div class="container reveal">
                 <h3 style="color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.875rem; margin-bottom: 3rem;">Certified Partner Network</h3>
-                <div class="flex justify-between items-center" style="opacity: 0.4; flex-wrap: wrap; gap: 3rem;">
-                    <i data-lucide="shield-check" size="64"></i>
-                    <i data-lucide="award" size="64"></i>
-                    <i data-lucide="target" size="64"></i>
-                    <i data-lucide="heart-pulse" size="64"></i>
-                    <i data-lucide="zap" size="64"></i>
+                <div class="flex justify-between items-center partner-logo-grid" style="flex-wrap: wrap; gap: 5rem; justify-content: center;">
+                    <img src="aha_logo_minimal_1776518221365.png" alt="AHA Partner" class="partner-logo">
+                    <img src="redcross_logo_minimal_1776518236870.png" alt="Red Cross Partner" class="partner-logo">
+                    <img src="osha_logo_minimal_1776518250050.png" alt="OSHA Partner" class="partner-logo">
+                    <img src="firstaid_logo_minimal_1776518262053.png" alt="First Aid Partner" class="partner-logo">
+                    <img src="medicalacademy_logo_minimal_1776518276877.png" alt="Medical Academy Partner" class="partner-logo">
                 </div>
             </div>
         </section>

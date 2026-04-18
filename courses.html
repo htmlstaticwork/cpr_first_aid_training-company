@@ -30,11 +30,14 @@
                 </ul>
             </nav>
             <div class="header-ctas">
-                <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon"
-                        id="moon-icon" style="display:none;"></i></button>
-                <button class="icon-btn" id="rtl-toggle"><i data-lucide="languages"></i></button>
-                <a href="login.html" class="btn btn-secondary">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="icon-btn theme-toggle desktop-only-toggle" title="Toggle Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+                </button>
+                <button class="rtl-btn rtl-toggle desktop-only-toggle" title="Toggle RTL">
+                    <span>RTL</span>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
                 <button class="mobile-nav-toggle" id="mobile-nav-toggle">
                     <i data-lucide="menu"></i>
                 </button>
@@ -56,9 +59,17 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="dashboard.html">Dashboard</a></li>
                 </ul>
+                <div class="menu-utilities mobile-only-toggle">
+                    <button class="icon-btn theme-toggle" title="Toggle Theme">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-btn rtl-toggle" title="Toggle RTL">
+                        <span>RTL</span>
+                    </button>
+                </div>
                 <div class="mobile-ctas">
-                    <a href="login.html" class="btn btn-secondary">Login</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary">Login</a>
                 </div>
             </div>
         </div>
@@ -93,7 +104,7 @@
         <section id="categories" style="padding: 120px 0; background: var(--bg-page);">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 6rem;" class="reveal-up">
-                    <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Pathways to Certification</h2>
+                    <h2 style="margin-bottom: 1.5rem;">Pathways to Certification</h2>
                     <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.125rem;">
                         Select your professional track to view available schedules and specialized modules.</p>
                 </div>
@@ -162,7 +173,7 @@
                         </div>
                     </div>
                     <div class="reveal-right">
-                        <h2 style="font-size: 3rem; margin-bottom: 3rem;">How it Works: <span
+                        <h2 style="margin-bottom: 3rem;">How it Works: <span
                                 style="color: var(--primary);">Blended Learning</span></h2>
                         <div style="display: flex; flex-direction: column; gap: 3rem;">
                             <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
@@ -257,8 +268,7 @@
             <div class="container">
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 6rem 3rem; text-align: center; backdrop-filter: blur(20px);"
                     class="reveal-pop">
-                    <h2 style="font-size: 4rem; color: white; margin-bottom: 2rem; font-weight: 900;">Ready to Become
-                        <br><span style="color: var(--primary);">Lifesaver Ready?</span></h2>
+                    <h2 class="cta-heading" style="color: white; margin-bottom: 2rem; font-weight: 900;">Ready to Become <span style="color: var(--primary);">Lifesaver Ready?</span></h2>
                     <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 4rem; font-size: 1.25rem;">
                         Secure your spot in our upcoming medical labs. Individual, private, and group sessions available
                         weekly.</p>

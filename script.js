@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Persistence and Toggle Logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const sunIcon = document.getElementById('sun-icon');
-    const moonIcon = document.getElementById('moon-icon');
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+    const sunIcons = document.querySelectorAll('.sun-icon');
+    const moonIcons = document.querySelectorAll('.moon-icon');
 
     const updateIcons = (isDarkMode) => {
-        if (!sunIcon || !moonIcon) return;
         if (isDarkMode) {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
+            sunIcons.forEach(icon => icon.style.display = 'none');
+            moonIcons.forEach(icon => icon.style.display = 'block');
         } else {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
+            sunIcons.forEach(icon => icon.style.display = 'block');
+            moonIcons.forEach(icon => icon.style.display = 'none');
         }
     };
 
@@ -23,21 +22,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateIcons(isDark);
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const isDarkModeNow = document.body.classList.toggle('dark-mode');
             localStorage.setItem('lifeforce-theme', isDarkModeNow ? 'dark' : 'light');
             updateIcons(isDarkModeNow);
         });
-    }
+    });
 
     // RTL Toggle
-    const rtlToggleBtn = document.getElementById('rtl-toggle');
-    if (rtlToggleBtn) {
-        rtlToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('rtl');
-            document.documentElement.dir = document.body.classList.contains('rtl') ? 'rtl' : 'ltr';
+    const rtlToggleBtns = document.querySelectorAll('.rtl-toggle');
+    
+    const updateRTLText = () => {
+        const isRTL = document.body.classList.contains('rtl');
+        rtlToggleBtns.forEach(btn => {
+            const span = btn.querySelector('span');
+            if (span) {
+                span.textContent = isRTL ? 'LTR' : 'RTL';
+            }
         });
+    };
+
+    rtlToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isRTL = document.body.classList.toggle('rtl');
+            document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+            updateRTLText();
+            localStorage.setItem('lifeforce-rtl', isRTL ? 'true' : 'false');
+        });
+    });
+
+    // Load saved RTL state
+    const savedRTL = localStorage.getItem('lifeforce-rtl') === 'true';
+    if (savedRTL) {
+        document.body.classList.add('rtl');
+        document.documentElement.dir = 'rtl';
+        updateRTLText();
     }
 
     // Reveal on Scroll
