@@ -8,27 +8,71 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-page); padding: 2.5rem 1.5rem; margin: 0; }
-        .auth-card { background: var(--bg-card); padding: 3.5rem 2.5rem 2.5rem; border-radius: 24px; box-shadow: var(--shadow-lg); width: 100%; max-width: 500px; text-align: center; overflow-y: auto; max-height: 95vh; position: relative; }
-        .auth-toggles { position: fixed; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.75rem; z-index: 1000; }
+        body { 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start;
+            background: var(--bg-page); 
+            padding: 1rem var(--container-padding, 1.5rem) 4rem; 
+            margin: 0; 
+        }
+        .auth-controls-wrapper {
+            width: 100%;
+            max-width: 1280px;
+            display: flex;
+            justify-content: flex-end;
+            position: sticky;
+            top: 12px;
+            z-index: 1000;
+            margin-bottom: 4rem; /* Gap between buttons and card */
+            pointer-events: none;
+        }
+        .auth-toggles { 
+            display: flex; 
+            gap: 0.75rem; 
+            pointer-events: auto;
+        }
+        .auth-toggles .icon-btn, 
+        .auth-toggles .rtl-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+        .auth-card { background: var(--bg-card); padding: 3.5rem 2.5rem 2.5rem; border-radius: 24px; box-shadow: var(--shadow-lg); width: 100%; max-width: 500px; text-align: center; position: relative; }
+
         .auth-form { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; }
         .form-group-full { grid-column: span 2; }
         .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.8rem; }
-        .input-group input { width: 100%; padding: 0.75rem 1rem; border-radius: 10px; border: 1.5px solid var(--border-light); font-size: 1rem; background: var(--bg-card); transition: border-color 0.2s; }
+        .input-group input { width: 100%; padding: 0.75rem 1rem; border-radius: 10px; border: 1.5px solid var(--border); font-size: 1rem; background: var(--bg-card); color: var(--text-primary); transition: border-color 0.2s; }
         .input-group input:focus { border-color: var(--primary); outline: none; }
         .input-group { position: relative; }
         .eye-icon { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-secondary); }
-        body.dark-mode .auth-card { background: var(--card-dark); border: 1px solid var(--border-dark); }
-        body.dark-mode .input-group input { background: var(--bg-dark); border-color: var(--border-dark); color: var(--text-primary-dark); }
+        body.dark-mode .auth-card { background: var(--bg-card); border: 1px solid var(--border); }
+        body.dark-mode .input-group input { background: var(--bg-card); border-color: var(--border); color: var(--text-primary); }
     </style>
 </head>
 <body>
 
-    <div class="auth-toggles">
-        <button class="icon-btn" id="theme-toggle"><i data-lucide="sun" id="sun-icon"></i><i data-lucide="moon" id="moon-icon" style="display:none;"></i></button>
-        <button class="rtl-btn" id="rtl-toggle" title="Toggle RTL">
-            <span>RTL</span>
-        </button>
+    <div class="auth-controls-wrapper">
+        <div class="auth-toggles">
+            <button class="icon-btn theme-toggle" title="Toggle Theme">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon" style="display:none;"></i>
+            </button>
+            <button class="rtl-btn rtl-toggle" title="Toggle RTL">
+                <span>RTL</span>
+            </button>
+        </div>
     </div>
 
     <div class="auth-card fade-in active">
@@ -36,7 +80,7 @@
             <i data-lucide="heart-pulse"></i>
             <span>LifeForce</span>
         </a>
-        <h2 style="margin-bottom: 0.25rem;">Start Life-Saving Training</h2>
+        <h2 style="margin-bottom: 0.5rem; font-size: 2.25rem;">Start Life-Saving Training</h2>
         <p style="color: var(--text-secondary); font-size: 0.875rem;">Join a community of certified heroes.</p>
 
         <form class="auth-form">
@@ -82,13 +126,15 @@
             <button type="submit" class="btn btn-primary form-group-full" style="padding: 1rem; font-size: 1rem; justify-content: center; margin-top: 1rem;">Create Hero Account</button>
         </form>
 
-        <div style="margin: 1.5rem 0; position: relative;">
-            <hr style="border: 0; border-top: 1px solid var(--border-light);"><span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--bg-card); padding: 0 1rem; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Or via social</span>
+        <div style="margin: 2.5rem 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="flex: 1; height: 1px; background: var(--border);"></div>
+            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap;">Or via social</span>
+            <div style="flex: 1; height: 1px; background: var(--border);"></div>
         </div>
 
-        <div style="display: flex; gap: 1rem; width: 100%; flex-wrap: wrap;">
-            <button class="btn btn-secondary" style="flex: 1; min-width: 160px; border-radius: 12px; gap: 0.75rem; white-space: nowrap;"><img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" style="width:18px;"> Google</button>
-            <button class="btn btn-secondary" style="flex: 1; min-width: 160px; border-radius: 12px; gap: 0.75rem; white-space: nowrap;"><i data-lucide="apple" size="18"></i> Apple</button>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
+            <button class="btn btn-secondary" style="width: 100%; border-radius: 12px; gap: 0.75rem; justify-content: center; padding: 0.75rem;"><img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" style="width:18px;"> Google</button>
+            <button class="btn btn-secondary" style="width: 100%; border-radius: 12px; gap: 0.75rem; justify-content: center; padding: 0.75rem;"><i data-lucide="apple" size="18"></i> Apple</button>
         </div>
 
         <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
